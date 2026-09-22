@@ -1,0 +1,31 @@
+rules:
+  known_mule:
+    description: Recipient is already listed as a confirmed or very-high-risk mule.
+    risk_delta: 1.0
+    hard_action: BLOCK
+  remote_access_collect:
+    description: A collect request is being approved while remote-access risk is active.
+    risk_delta: 0.75
+    hard_action: HOLD
+  new_device_pin_reset_new_payee:
+    description: New/young device, recent PIN reset and first-time beneficiary occur together.
+    risk_delta: 0.55
+    hard_action: STEP_UP
+  unverified_qr_high_complaint:
+    description: Unverified QR points to a recipient with high complaint intelligence.
+    risk_delta: 0.60
+    hard_action: STEP_UP
+  impossible_travel:
+    description: Current journey requires physically implausible movement speed.
+    risk_delta: 0.40
+    hard_action: STEP_UP
+protective_rules:
+  verified_merchant_normal_device:
+    description: Verified merchant QR and stable device reduce risk.
+    risk_delta: -0.20
+  plausible_travel_near_payee:
+    description: Coherent journey and physical payer-payee proximity support legitimate novelty.
+    risk_delta: -0.18
+  trusted_self_transfer:
+    description: Verified common ownership supports a genuine self-transfer.
+    risk_delta: -0.35

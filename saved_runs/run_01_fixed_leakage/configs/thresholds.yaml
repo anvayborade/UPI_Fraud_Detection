@@ -1,0 +1,9 @@
+policy:
+  block_risk: 0.92
+  hold_risk: 0.82
+  step_up_risk: 0.65
+  warn_risk: 0.42
+  high_uncertainty: 0.62
+  high_context_legitimacy: 0.80
+  high_mule_risk: 0.88
+  high_account_takeover_risk: 0.85

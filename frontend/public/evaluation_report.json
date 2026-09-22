@@ -1,0 +1,178 @@
+{
+  "summary": {
+    "rows": 9000,
+    "fraud_prevalence": 0.06322222222222222,
+    "pr_auc": 0.9752514853389705,
+    "roc_auc": 0.9973078264393331,
+    "brier_score": 0.008737341910717225,
+    "legitimate_novelty_count": 4648,
+    "legitimate_novelty_fpr_at_050": 0.004733218588640275,
+    "legitimate_novelty_block_or_hold_rate": 0.0034423407917383822,
+    "scope": "held_out_test"
+  },
+  "by_source": {
+    "banksim": {
+      "rows": 4500,
+      "fraud_prevalence": 0.07311111111111111,
+      "pr_auc": 0.9984808220085941,
+      "roc_auc": 0.9999001646190697,
+      "mean_risk": 0.07334817200899124
+    },
+    "paysim": {
+      "rows": 4500,
+      "fraud_prevalence": 0.05333333333333334,
+      "pr_auc": 0.9078288251041152,
+      "roc_auc": 0.9890385367762129,
+      "mean_risk": 0.0718328207731247
+    }
+  },
+  "by_scenario": {
+    "account_takeover": {
+      "rows": 10,
+      "fraud_rate": 1.0,
+      "mean_risk": 0.9997450709342957,
+      "mean_uncertainty": 0.361011917082584,
+      "actions": {
+        "HOLD": 5,
+        "BLOCK": 5
+      }
+    },
+    "auto_long_distance_legitimate": {
+      "rows": 2617,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.0003792888601310551,
+      "mean_uncertainty": 0.16957575435918076,
+      "actions": {
+        "ALLOW": 2616,
+        "HOLD": 1
+      }
+    },
+    "collect_request_scam": {
+      "rows": 149,
+      "fraud_rate": 1.0,
+      "mean_risk": 0.9383824467658997,
+      "mean_uncertainty": 0.3303170232600702,
+      "actions": {
+        "BLOCK": 124,
+        "HOLD": 12,
+        "ALLOW": 6,
+        "STEP_UP": 5,
+        "WARN": 2
+      }
+    },
+    "fake_refund_qr": {
+      "rows": 139,
+      "fraud_rate": 1.0,
+      "mean_risk": 0.9286288022994995,
+      "mean_uncertainty": 0.3293268544581687,
+      "actions": {
+        "BLOCK": 123,
+        "ALLOW": 9,
+        "STEP_UP": 3,
+        "WARN": 3,
+        "HOLD": 1
+      }
+    },
+    "familiar_legitimate": {
+      "rows": 3783,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.021238988265395164,
+      "mean_uncertainty": 0.39448472061258605,
+      "actions": {
+        "ALLOW": 3729,
+        "BLOCK": 17,
+        "WARN": 13,
+        "STEP_UP": 11,
+        "HOLD": 9,
+        "CONFIRM": 4
+      }
+    },
+    "gig_worker_payment_legitimate": {
+      "rows": 1262,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.00440967595204711,
+      "mean_uncertainty": 0.2166508044357357,
+      "actions": {
+        "ALLOW": 1256,
+        "HOLD": 3,
+        "WARN": 2,
+        "BLOCK": 1
+      }
+    },
+    "hospital_emergency_legitimate": {
+      "rows": 34,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.0001046781035256572,
+      "mean_uncertainty": 0.16396115288946714,
+      "actions": {
+        "ALLOW": 34
+      }
+    },
+    "legitimate_split_payment": {
+      "rows": 253,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.07557417452335358,
+      "mean_uncertainty": 0.4342230838430851,
+      "actions": {
+        "ALLOW": 238,
+        "WARN": 6,
+        "BLOCK": 6,
+        "HOLD": 2,
+        "STEP_UP": 1
+      }
+    },
+    "mule_directed": {
+      "rows": 152,
+      "fraud_rate": 1.0,
+      "mean_risk": 0.9264068603515625,
+      "mean_uncertainty": 0.3612948412504857,
+      "actions": {
+        "BLOCK": 129,
+        "HOLD": 8,
+        "ALLOW": 8,
+        "STEP_UP": 4,
+        "WARN": 3
+      }
+    },
+    "new_merchant_legitimate": {
+      "rows": 476,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.018504003062844276,
+      "mean_uncertainty": 0.32245008472302905,
+      "actions": {
+        "ALLOW": 470,
+        "WARN": 3,
+        "BLOCK": 2,
+        "HOLD": 1
+      }
+    },
+    "remote_access_scam": {
+      "rows": 119,
+      "fraud_rate": 1.0,
+      "mean_risk": 0.9962584972381592,
+      "mean_uncertainty": 0.36984511696462585,
+      "actions": {
+        "BLOCK": 116,
+        "HOLD": 2,
+        "CONFIRM": 1
+      }
+    },
+    "travel_hotel_legitimate": {
+      "rows": 6,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.03560226783156395,
+      "mean_uncertainty": 0.2477326151318395,
+      "actions": {
+        "ALLOW": 6
+      }
+    }
+  },
+  "action_distribution": {
+    "ALLOW": 8372,
+    "BLOCK": 523,
+    "HOLD": 44,
+    "WARN": 32,
+    "STEP_UP": 24,
+    "CONFIRM": 5
+  }
+}

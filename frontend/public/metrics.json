@@ -1,0 +1,47 @@
+{
+  "transaction_pr_auc": 0.9383238853525022,
+  "transaction_roc_auc": 0.9911028227071829,
+  "context_pr_auc": 0.9701487389936356,
+  "final_pr_auc": 0.9752514853389705,
+  "final_roc_auc": 0.9973078264393331,
+  "legitimate_novelty_false_positive_rate_at_05": 0.004733218588640275,
+  "fraud_type_thresholds": {
+    "is_account_takeover": 0.73,
+    "is_social_engineering": 0.85,
+    "is_qr_deception": 0.8,
+    "is_collect_scam": 0.85,
+    "is_mule_directed": 0.85,
+    "is_transaction_splitting": 0.65,
+    "is_remote_access_fraud": 0.7000000000000001
+  },
+  "fraud_type_test_metrics": {
+    "is_account_takeover": {
+      "pr_auc": 0.9246503496503498,
+      "prevalence": 0.0011111111111111111
+    },
+    "is_social_engineering": {
+      "pr_auc": 0.9752563020779847,
+      "prevalence": 0.04522222222222222
+    },
+    "is_qr_deception": {
+      "pr_auc": 0.9054128396102515,
+      "prevalence": 0.015444444444444445
+    },
+    "is_collect_scam": {
+      "pr_auc": 0.9200004387955754,
+      "prevalence": 0.016555555555555556
+    },
+    "is_mule_directed": {
+      "pr_auc": 0.9332846704759942,
+      "prevalence": 0.016888888888888887
+    },
+    "is_transaction_splitting": {
+      "pr_auc": 0.44719012040567896,
+      "prevalence": 0.007333333333333333
+    },
+    "is_remote_access_fraud": {
+      "pr_auc": 0.9943728593181631,
+      "prevalence": 0.013222222222222222
+    }
+  }
+}

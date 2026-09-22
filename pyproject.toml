@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "upi-fraud-intent-firewall"
+version = "0.1.0"
+description = "Context-aware research prototype for pre-authorisation UPI fraud detection"
+requires-python = ">=3.11,<3.15"
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-ra"

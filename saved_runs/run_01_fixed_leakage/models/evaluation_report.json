@@ -1,0 +1,201 @@
+{
+  "summary": {
+    "rows": 60000,
+    "fraud_prevalence": 0.049183333333333336,
+    "pr_auc": 0.9627605501949807,
+    "roc_auc": 0.996062466861393,
+    "brier_score": 0.006680248144656445,
+    "legitimate_novelty_count": 23798,
+    "legitimate_novelty_fpr_at_050": 0.0030254643247331708,
+    "legitimate_novelty_block_or_hold_rate": 0.0010925287839314228
+  },
+  "by_source": {
+    "banksim": {
+      "rows": 30000,
+      "fraud_prevalence": 0.05553333333333333,
+      "pr_auc": 0.9767490419902816,
+      "roc_auc": 0.9981122963761633,
+      "mean_risk": 0.05453057214617729
+    },
+    "paysim": {
+      "rows": 30000,
+      "fraud_prevalence": 0.042833333333333334,
+      "pr_auc": 0.9421667641446838,
+      "roc_auc": 0.9925296435992794,
+      "mean_risk": 0.04265798255801201
+    }
+  },
+  "by_scenario": {
+    "account_takeover": {
+      "rows": 396,
+      "fraud_rate": 1.0,
+      "mean_risk": 0.9450973272323608,
+      "mean_uncertainty": 0.45234641952314947,
+      "actions": {
+        "STEP_UP": 244,
+        "BLOCK": 102,
+        "HOLD": 27,
+        "CONFIRM": 14,
+        "WARN": 5,
+        "ALLOW": 4
+      }
+    },
+    "auto_long_distance_legitimate": {
+      "rows": 4522,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.0015221309149637818,
+      "mean_uncertainty": 0.26685857335885205,
+      "actions": {
+        "ALLOW": 4519,
+        "WARN": 2,
+        "CONFIRM": 1
+      }
+    },
+    "collect_request_scam": {
+      "rows": 541,
+      "fraud_rate": 1.0,
+      "mean_risk": 0.8723114132881165,
+      "mean_uncertainty": 0.460416574219297,
+      "actions": {
+        "BLOCK": 341,
+        "HOLD": 91,
+        "ALLOW": 51,
+        "CONFIRM": 29,
+        "STEP_UP": 19,
+        "WARN": 10
+      }
+    },
+    "fake_refund_qr": {
+      "rows": 896,
+      "fraud_rate": 1.0,
+      "mean_risk": 0.8621716499328613,
+      "mean_uncertainty": 0.4264888999056767,
+      "actions": {
+        "BLOCK": 457,
+        "STEP_UP": 199,
+        "HOLD": 96,
+        "ALLOW": 93,
+        "CONFIRM": 28,
+        "WARN": 23
+      }
+    },
+    "familiar_legitimate": {
+      "rows": 33251,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.0037120291963219643,
+      "mean_uncertainty": 0.3159645752477075,
+      "actions": {
+        "ALLOW": 33146,
+        "CONFIRM": 65,
+        "HOLD": 14,
+        "WARN": 13,
+        "STEP_UP": 9,
+        "BLOCK": 4
+      }
+    },
+    "gig_worker_payment_legitimate": {
+      "rows": 3923,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.00623619370162487,
+      "mean_uncertainty": 0.2456928892718295,
+      "actions": {
+        "ALLOW": 3900,
+        "CONFIRM": 14,
+        "WARN": 5,
+        "STEP_UP": 2,
+        "BLOCK": 1,
+        "HOLD": 1
+      }
+    },
+    "hospital_emergency_legitimate": {
+      "rows": 2653,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.010645945556461811,
+      "mean_uncertainty": 0.2637759696318085,
+      "actions": {
+        "ALLOW": 2642,
+        "WARN": 3,
+        "HOLD": 2,
+        "CONFIRM": 2,
+        "STEP_UP": 2,
+        "BLOCK": 2
+      }
+    },
+    "legitimate_split_payment": {
+      "rows": 2357,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.05035828426480293,
+      "mean_uncertainty": 0.343110092321858,
+      "actions": {
+        "ALLOW": 2305,
+        "CONFIRM": 17,
+        "STEP_UP": 14,
+        "WARN": 10,
+        "BLOCK": 6,
+        "HOLD": 5
+      }
+    },
+    "mule_directed": {
+      "rows": 798,
+      "fraud_rate": 1.0,
+      "mean_risk": 0.7877272963523865,
+      "mean_uncertainty": 0.38314558610049215,
+      "actions": {
+        "BLOCK": 544,
+        "ALLOW": 180,
+        "HOLD": 48,
+        "STEP_UP": 14,
+        "CONFIRM": 9,
+        "WARN": 3
+      }
+    },
+    "new_merchant_legitimate": {
+      "rows": 7187,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.0018975685816258192,
+      "mean_uncertainty": 0.23751107508091815,
+      "actions": {
+        "ALLOW": 7173,
+        "CONFIRM": 8,
+        "WARN": 3,
+        "HOLD": 2,
+        "STEP_UP": 1
+      }
+    },
+    "remote_access_scam": {
+      "rows": 320,
+      "fraud_rate": 1.0,
+      "mean_risk": 0.9831639528274536,
+      "mean_uncertainty": 0.4226969057534484,
+      "actions": {
+        "BLOCK": 261,
+        "HOLD": 28,
+        "STEP_UP": 27,
+        "ALLOW": 2,
+        "CONFIRM": 2
+      }
+    },
+    "travel_hotel_legitimate": {
+      "rows": 3156,
+      "fraud_rate": 0.0,
+      "mean_risk": 0.012167489156126976,
+      "mean_uncertainty": 0.26822493267422987,
+      "actions": {
+        "ALLOW": 3144,
+        "HOLD": 4,
+        "BLOCK": 3,
+        "STEP_UP": 2,
+        "WARN": 2,
+        "CONFIRM": 1
+      }
+    }
+  },
+  "action_distribution": {
+    "ALLOW": 57159,
+    "BLOCK": 1721,
+    "STEP_UP": 533,
+    "HOLD": 318,
+    "CONFIRM": 190,
+    "WARN": 79
+  }
+}

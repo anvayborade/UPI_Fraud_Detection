@@ -1,0 +1,16 @@
+policy:
+  block_risk: 0.92
+  hold_risk: 0.82
+  step_up_risk: 0.65
+  warn_risk: 0.42
+  high_uncertainty: 0.62
+  high_context_legitimacy: 0.80
+  high_mule_risk: 0.78
+  high_account_takeover_risk: 0.85
+
+runtime_guardrails:
+  mule_transaction_risk: 0.80
+  mule_graph_risk: 0.70
+  mule_graph_anomaly: 0.70
+  qr_transaction_risk: 0.72
+  qr_social_risk: 0.72

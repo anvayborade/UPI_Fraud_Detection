@@ -1,0 +1,22 @@
+seed: 42
+lightgbm:
+  n_estimators: 350
+  learning_rate: 0.04
+  num_leaves: 31
+  subsample: 0.85
+  colsample_bytree: 0.85
+transformer:
+  d_model: 64
+  nhead: 4
+  num_layers: 2
+  max_sequence_length: 40
+  batch_size: 128
+  epochs: 6
+graph:
+  hidden_channels: 64
+  out_channels: 32
+  num_layers: 2
+  epochs: 12
+fusion:
+  hidden_dim: 32
+  epochs: 20

@@ -1,0 +1,25 @@
+node_types:
+  - account
+  - user
+  - device
+  - vpa
+  - merchant
+  - ip_asn
+  - h3_cell
+  - qr
+  - complaint
+  - transaction
+edge_types:
+  - [user, owns, account]
+  - [user, uses, device]
+  - [device, connects_from, ip_asn]
+  - [account, owns, vpa]
+  - [account, pays, account]
+  - [transaction, sent_by, account]
+  - [transaction, received_by, account]
+  - [transaction, initiated_from, device]
+  - [transaction, occurred_in, h3_cell]
+  - [user, scanned, qr]
+  - [qr, resolves_to, vpa]
+  - [vpa, belongs_to, merchant]
+  - [complaint, flags, account]

@@ -1,0 +1,8 @@
+{
+  "transaction_pr_auc": 0.852884471038966,
+  "transaction_roc_auc": 0.9847881219666,
+  "context_pr_auc": 0.8969586194346608,
+  "final_pr_auc": 0.9446822067734999,
+  "final_roc_auc": 0.9910944702779959,
+  "legitimate_novelty_false_positive_rate_at_05": 0.00224278104850014
+}

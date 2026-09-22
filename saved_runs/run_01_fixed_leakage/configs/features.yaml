@@ -1,0 +1,44 @@
+transaction_features:
+  - amount
+  - log_amount
+  - hour
+  - is_weekend
+  - is_new_payee
+  - collect_request
+  - qr_verified
+  - recent_pin_reset
+  - app_reregistered
+  - remote_access_indicator
+  - overlay_indicator
+  - device_age_days
+  - sim_age_days
+  - app_registration_age_days
+  - distance_from_usual_km
+  - journey_plausibility
+  - payer_payee_proximity_km
+  - txn_count_5m
+  - txn_count_1h
+  - amount_sum_1h
+  - unique_payees_1h
+  - amount_robust_z
+  - time_since_previous_sec
+  - merchant_category_consistency
+  - recipient_account_age_days
+  - play_integrity_ok
+
+context_features:
+  - is_new_payee
+  - qr_verified
+  - device_known
+  - recent_pin_reset
+  - app_reregistered
+  - remote_access_indicator
+  - overlay_indicator
+  - journey_plausibility
+  - payer_payee_proximity_km
+  - merchant_category_consistency
+  - recipient_account_age_days
+  - location_continuity
+  - play_integrity_ok
+  - amount_robust_z
+  - distance_from_usual_km

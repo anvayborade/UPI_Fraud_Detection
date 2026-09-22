@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPI Fraud Intent Firewall – Telemetry Client"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editApiUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="API URL"
+            android:text="http://10.0.2.2:8000" />
+
+        <EditText
+            android:id="@+id/editPayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Payer ID"
+            android:text="U000001" />
+
+        <EditText
+            android:id="@+id/editPayee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Payee ID"
+            android:text="A000001" />
+
+        <EditText
+            android:id="@+id/editAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:text="850" />
+
+        <CheckBox
+            android:id="@+id/checkNewPayee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="First-time payee" />
+
+        <CheckBox
+            android:id="@+id/checkQrVerified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Verified QR" />
+
+        <CheckBox
+            android:id="@+id/checkPinReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent PIN reset" />
+
+        <CheckBox
+            android:id="@+id/checkRemoteAccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simulated remote-access risk" />
+
+        <Button
+            android:id="@+id/buttonTelemetry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Telemetry Event" />
+
+        <Button
+            android:id="@+id/buttonPrecheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Run Recipient Precheck" />
+
+        <Button
+            android:id="@+id/buttonScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Score Before Payment" />
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Result will appear here."
+            android:textIsSelectable="true" />
+    </LinearLayout>
+</ScrollView>

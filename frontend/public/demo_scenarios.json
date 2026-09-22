@@ -1,0 +1,5707 @@
+[
+  {
+    "key": "auto",
+    "scenario": "auto_long_distance_legitimate",
+    "label": "Long-distance auto payment",
+    "short_label": "Auto",
+    "kind": "legitimate",
+    "category": "Legitimate novelty",
+    "description": "A distant or unfamiliar transport payment that should remain frictionless when journey and recipient context are plausible.",
+    "source_dataset": "paysim",
+    "recipient_profile": "transport_provider",
+    "reference_transaction_id": "PS_TXN_0000021076",
+    "payer_id": "PS_C898151325",
+    "payee_id": "PS_C604555852",
+    "amount": 1421.51,
+    "payload": {
+      "transaction_id": "WEB-AUTO-PS_TXN_0000021076",
+      "reference_transaction_id": "PS_TXN_0000021076",
+      "simulation_mode": true,
+      "session_id": "S-PS_TXN_0000021076",
+      "timestamp": "2026-01-01T08:51:16+00:00",
+      "payer_id": "PS_C898151325",
+      "payee_id": "PS_C604555852",
+      "amount": 1421.51,
+      "payment_mode": "QR",
+      "device_id": "D027508",
+      "vpa_id": "vpa005630@upi",
+      "merchant_id": "MPS_C604555852",
+      "qr_id": "QR005630",
+      "ip_asn": "AS1008",
+      "latitude": 19.100690470178023,
+      "longitude": 72.78623174033379,
+      "payee_latitude": 19.100690470178023,
+      "payee_longitude": 72.78623174033379,
+      "is_new_payee": true,
+      "qr_verified": true,
+      "collect_request": false,
+      "merchant_category": "TRANSPORT",
+      "device_age_days": 881,
+      "sim_age_days": 1307,
+      "app_registration_age_days": 297,
+      "device_known": true,
+      "play_integrity_ok": true,
+      "recent_pin_reset": false,
+      "app_reregistered": false,
+      "remote_access_indicator": false,
+      "overlay_indicator": false,
+      "recipient_complaint_score": 0.004318598752562737,
+      "known_mule": false,
+      "common_owner_verified": false
+    },
+    "offline": {
+      "transaction_id": "PS_TXN_0000021076",
+      "fraud_probability": 0.0007242467836476862,
+      "legitimate_novelty_probability": 0.8073722491317071,
+      "uncertainty": 0.23569114276971953,
+      "recommended_action": "ALLOW",
+      "fraud_types": [],
+      "reason_codes": [],
+      "model_scores": {
+        "rule_risk": 0.0,
+        "statistical_anomaly": 0.0,
+        "transaction_fraud": 0.0001923160469036537,
+        "legitimate_novelty": 0.8073722491317071,
+        "device_session_risk": 0.0,
+        "sequence_account_takeover": 5.683079507434741e-05,
+        "sequence_social_engineering": 0.0016090132994577289,
+        "graph_mule": 0.010825054388950728,
+        "graph_merchant_legitimacy": 0.8920226693153381,
+        "graph_anomaly": 0.5808777821863053,
+        "complaint_intelligence": 0.0,
+        "journey_plausibility": 0.9411967241854721
+      },
+      "latency_ms": 0.0
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "PS_C1048512779",
+          "label": "PS_C1048512779",
+          "type": "payer"
+        },
+        {
+          "id": "PS_C1294947444",
+          "label": "PS_C1294947444",
+          "type": "payer"
+        },
+        {
+          "id": "PS_C406011546",
+          "label": "PS_C406011546",
+          "type": "payer"
+        },
+        {
+          "id": "PS_C604555852",
+          "label": "PS_C604555852",
+          "type": "target"
+        },
+        {
+          "id": "PS_C786027045",
+          "label": "PS_C786027045",
+          "type": "payer"
+        },
+        {
+          "id": "PS_C898151325",
+          "label": "PS_C898151325",
+          "type": "payer"
+        }
+      ],
+      "edges": [
+        {
+          "id": "e0",
+          "source": "PS_C898151325",
+          "target": "PS_C604555852",
+          "amount": 1421.51,
+          "count": 1
+        },
+        {
+          "id": "e1",
+          "source": "PS_C1048512779",
+          "target": "PS_C604555852",
+          "amount": 1116.2,
+          "count": 1
+        },
+        {
+          "id": "e2",
+          "source": "PS_C786027045",
+          "target": "PS_C604555852",
+          "amount": 1075.54,
+          "count": 1
+        },
+        {
+          "id": "e3",
+          "source": "PS_C1294947444",
+          "target": "PS_C604555852",
+          "amount": 1034.51,
+          "count": 1
+        },
+        {
+          "id": "e4",
+          "source": "PS_C406011546",
+          "target": "PS_C604555852",
+          "amount": 545.77,
+          "count": 1
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "transaction_id": "PS_TXN_0000021076",
+        "timestamp": "2026-01-01T08:51:16+00:00",
+        "amount": 1421.51,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 0.0007242467836476862,
+        "tags": [
+          "New payee"
+        ],
+        "selected": true
+      }
+    ]
+  },
+  {
+    "key": "hospital",
+    "scenario": "hospital_emergency_legitimate",
+    "label": "Emergency hospital payment",
+    "short_label": "Hospital",
+    "kind": "legitimate",
+    "category": "Legitimate novelty",
+    "description": "A large, unusual emergency payment where contextual evidence should override a suspicious-looking transaction amount.",
+    "source_dataset": "banksim",
+    "recipient_profile": "hospital",
+    "reference_transaction_id": "BS_TXN_0000025846",
+    "payer_id": "BS_CUSTOMER_C1355509614",
+    "payee_id": "BS_MERCHANT_M1053599405",
+    "amount": 35357.82,
+    "payload": {
+      "transaction_id": "WEB-HOSPITAL-BS_TXN_0000025846",
+      "reference_transaction_id": "BS_TXN_0000025846",
+      "simulation_mode": true,
+      "session_id": "S-BS_TXN_0000025846",
+      "timestamp": "2026-02-01T10:10:46+00:00",
+      "payer_id": "BS_CUSTOMER_C1355509614",
+      "payee_id": "BS_MERCHANT_M1053599405",
+      "amount": 35357.82,
+      "payment_mode": "QR",
+      "device_id": "D032126",
+      "vpa_id": "vpa017805@upi",
+      "merchant_id": "MBS_MERCHANT_M1053599405",
+      "qr_id": "QR017805",
+      "ip_asn": "AS1126",
+      "latitude": 19.44383603885204,
+      "longitude": 72.67187138528224,
+      "payee_latitude": 19.44383603885204,
+      "payee_longitude": 72.67187138528224,
+      "is_new_payee": true,
+      "qr_verified": true,
+      "collect_request": false,
+      "merchant_category": "HEALTHCARE",
+      "device_age_days": 496,
+      "sim_age_days": 223,
+      "app_registration_age_days": 240,
+      "device_known": true,
+      "play_integrity_ok": true,
+      "recent_pin_reset": false,
+      "app_reregistered": false,
+      "remote_access_indicator": false,
+      "overlay_indicator": false,
+      "recipient_complaint_score": 0.05092956952541119,
+      "known_mule": false,
+      "common_owner_verified": false
+    },
+    "offline": {
+      "transaction_id": "BS_TXN_0000025846",
+      "fraud_probability": 1.4347439680761909e-08,
+      "legitimate_novelty_probability": 0.9944442091705719,
+      "uncertainty": 0.15609382602007285,
+      "recommended_action": "ALLOW",
+      "fraud_types": [],
+      "reason_codes": [],
+      "model_scores": {
+        "rule_risk": 0.0,
+        "statistical_anomaly": 0.0,
+        "transaction_fraud": 0.011892951952573907,
+        "legitimate_novelty": 0.9944442091705719,
+        "device_session_risk": 0.0,
+        "sequence_account_takeover": 0.0007270242203958333,
+        "sequence_social_engineering": 0.001390020945109427,
+        "graph_mule": 0.04413906673464567,
+        "graph_merchant_legitimacy": 0.8546976447105408,
+        "graph_anomaly": 0.22523307657447758,
+        "complaint_intelligence": 0.0,
+        "journey_plausibility": 0.9679030545502509
+      },
+      "latency_ms": 0.0
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "BS_CUSTOMER_C1010589026",
+          "label": "BS_CUSTOMER_C1010589026",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1017941602",
+          "label": "BS_CUSTOMER_C1017941602",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1047521541",
+          "label": "BS_CUSTOMER_C1047521541",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1087227796",
+          "label": "BS_CUSTOMER_C1087227796",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1102156492",
+          "label": "BS_CUSTOMER_C1102156492",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1134994937",
+          "label": "BS_CUSTOMER_C1134994937",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1158875335",
+          "label": "BS_CUSTOMER_C1158875335",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1189752912",
+          "label": "BS_CUSTOMER_C1189752912",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1256073744",
+          "label": "BS_CUSTOMER_C1256073744",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1258725927",
+          "label": "BS_CUSTOMER_C1258725927",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1341583263",
+          "label": "BS_CUSTOMER_C1341583263",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1355509614",
+          "label": "BS_CUSTOMER_C1355509614",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1376617526",
+          "label": "BS_CUSTOMER_C1376617526",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1457264318",
+          "label": "BS_CUSTOMER_C1457264318",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1585648581",
+          "label": "BS_CUSTOMER_C1585648581",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1591908890",
+          "label": "BS_CUSTOMER_C1591908890",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1741401017",
+          "label": "BS_CUSTOMER_C1741401017",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1767929602",
+          "label": "BS_CUSTOMER_C1767929602",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1783773775",
+          "label": "BS_CUSTOMER_C1783773775",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2005093875",
+          "label": "BS_CUSTOMER_C2005093875",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2007043031",
+          "label": "BS_CUSTOMER_C2007043031",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2075699398",
+          "label": "BS_CUSTOMER_C2075699398",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C236999052",
+          "label": "BS_CUSTOMER_C236999052",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C325775693",
+          "label": "BS_CUSTOMER_C325775693",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C334841918",
+          "label": "BS_CUSTOMER_C334841918",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C388262831",
+          "label": "BS_CUSTOMER_C388262831",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C566987196",
+          "label": "BS_CUSTOMER_C566987196",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C723171448",
+          "label": "BS_CUSTOMER_C723171448",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C779872024",
+          "label": "BS_CUSTOMER_C779872024",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C805483863",
+          "label": "BS_CUSTOMER_C805483863",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C858011639",
+          "label": "BS_CUSTOMER_C858011639",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C88292631",
+          "label": "BS_CUSTOMER_C88292631",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C911139709",
+          "label": "BS_CUSTOMER_C911139709",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C914243510",
+          "label": "BS_CUSTOMER_C914243510",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C971838371",
+          "label": "BS_CUSTOMER_C971838371",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C99594781",
+          "label": "BS_CUSTOMER_C99594781",
+          "type": "payer"
+        },
+        {
+          "id": "BS_MERCHANT_M1053599405",
+          "label": "BS_MERCHANT_M1053599405",
+          "type": "target"
+        }
+      ],
+      "edges": [
+        {
+          "id": "e0",
+          "source": "BS_CUSTOMER_C779872024",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 17282.690000000002,
+          "count": 2
+        },
+        {
+          "id": "e1",
+          "source": "BS_CUSTOMER_C1134994937",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 16722.219999999998,
+          "count": 2
+        },
+        {
+          "id": "e2",
+          "source": "BS_CUSTOMER_C1376617526",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 180000.0,
+          "count": 1
+        },
+        {
+          "id": "e3",
+          "source": "BS_CUSTOMER_C1158875335",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 101002.27,
+          "count": 1
+        },
+        {
+          "id": "e4",
+          "source": "BS_CUSTOMER_C1102156492",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 77148.87,
+          "count": 1
+        },
+        {
+          "id": "e5",
+          "source": "BS_CUSTOMER_C566987196",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 75012.73,
+          "count": 1
+        },
+        {
+          "id": "e6",
+          "source": "BS_CUSTOMER_C1457264318",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 70635.14,
+          "count": 1
+        },
+        {
+          "id": "e7",
+          "source": "BS_CUSTOMER_C388262831",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 66130.34,
+          "count": 1
+        },
+        {
+          "id": "e8",
+          "source": "BS_CUSTOMER_C1341583263",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 58422.54,
+          "count": 1
+        },
+        {
+          "id": "e9",
+          "source": "BS_CUSTOMER_C914243510",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 39658.53,
+          "count": 1
+        },
+        {
+          "id": "e10",
+          "source": "BS_CUSTOMER_C2075699398",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 39337.76,
+          "count": 1
+        },
+        {
+          "id": "e11",
+          "source": "BS_CUSTOMER_C2007043031",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 37385.92,
+          "count": 1
+        },
+        {
+          "id": "e12",
+          "source": "BS_CUSTOMER_C1355509614",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 35357.82,
+          "count": 1
+        },
+        {
+          "id": "e13",
+          "source": "BS_CUSTOMER_C911139709",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 33465.03,
+          "count": 1
+        },
+        {
+          "id": "e14",
+          "source": "BS_CUSTOMER_C334841918",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 33072.87,
+          "count": 1
+        },
+        {
+          "id": "e15",
+          "source": "BS_CUSTOMER_C1783773775",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 32725.69,
+          "count": 1
+        },
+        {
+          "id": "e16",
+          "source": "BS_CUSTOMER_C1767929602",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 29211.59,
+          "count": 1
+        },
+        {
+          "id": "e17",
+          "source": "BS_CUSTOMER_C1017941602",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 27840.23,
+          "count": 1
+        },
+        {
+          "id": "e18",
+          "source": "BS_CUSTOMER_C1047521541",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 26891.19,
+          "count": 1
+        },
+        {
+          "id": "e19",
+          "source": "BS_CUSTOMER_C1591908890",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 26567.28,
+          "count": 1
+        },
+        {
+          "id": "e20",
+          "source": "BS_CUSTOMER_C1256073744",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 22278.25,
+          "count": 1
+        },
+        {
+          "id": "e21",
+          "source": "BS_CUSTOMER_C2005093875",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 22170.3,
+          "count": 1
+        },
+        {
+          "id": "e22",
+          "source": "BS_CUSTOMER_C1087227796",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 21295.18,
+          "count": 1
+        },
+        {
+          "id": "e23",
+          "source": "BS_CUSTOMER_C325775693",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 20746.34,
+          "count": 1
+        },
+        {
+          "id": "e24",
+          "source": "BS_CUSTOMER_C1010589026",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 20001.64,
+          "count": 1
+        },
+        {
+          "id": "e25",
+          "source": "BS_CUSTOMER_C1585648581",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 19774.84,
+          "count": 1
+        },
+        {
+          "id": "e26",
+          "source": "BS_CUSTOMER_C236999052",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 19562.4,
+          "count": 1
+        },
+        {
+          "id": "e27",
+          "source": "BS_CUSTOMER_C805483863",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 18688.89,
+          "count": 1
+        },
+        {
+          "id": "e28",
+          "source": "BS_CUSTOMER_C1741401017",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 18330.28,
+          "count": 1
+        },
+        {
+          "id": "e29",
+          "source": "BS_CUSTOMER_C971838371",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 17734.31,
+          "count": 1
+        },
+        {
+          "id": "e30",
+          "source": "BS_CUSTOMER_C99594781",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 17676.09,
+          "count": 1
+        },
+        {
+          "id": "e31",
+          "source": "BS_CUSTOMER_C1258725927",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 16623.74,
+          "count": 1
+        },
+        {
+          "id": "e32",
+          "source": "BS_CUSTOMER_C88292631",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 14797.76,
+          "count": 1
+        },
+        {
+          "id": "e33",
+          "source": "BS_CUSTOMER_C723171448",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 13426.47,
+          "count": 1
+        },
+        {
+          "id": "e34",
+          "source": "BS_CUSTOMER_C858011639",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 13293.41,
+          "count": 1
+        },
+        {
+          "id": "e35",
+          "source": "BS_CUSTOMER_C1189752912",
+          "target": "BS_MERCHANT_M1053599405",
+          "amount": 12659.39,
+          "count": 1
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "transaction_id": "BS_TXN_0000002853",
+        "timestamp": "2026-02-01T01:47:33+00:00",
+        "amount": 20.4,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 8.973323929239996e-06,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000006258",
+        "timestamp": "2026-02-01T02:44:18+00:00",
+        "amount": 1452.5,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 6.213246592778887e-07,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000008460",
+        "timestamp": "2026-02-01T03:21:00+00:00",
+        "amount": 1294.28,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 4.831126716453582e-07,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000010948",
+        "timestamp": "2026-02-01T04:02:28+00:00",
+        "amount": 1175.74,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.118490558837948e-06,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000013393",
+        "timestamp": "2026-02-01T05:43:13+00:00",
+        "amount": 402.61,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.4157903933664784e-06,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000015746",
+        "timestamp": "2026-02-01T06:22:26+00:00",
+        "amount": 2005.46,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.0038058162464836e-09,
+        "tags": [
+          "PIN reset"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000019681",
+        "timestamp": "2026-02-01T07:28:01+00:00",
+        "amount": 54.48,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 2.546526545188499e-08,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000020854",
+        "timestamp": "2026-02-01T08:47:34+00:00",
+        "amount": 1811.26,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 2.769205309505196e-07,
+        "tags": [
+          "New payee",
+          "PIN reset"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000023497",
+        "timestamp": "2026-02-01T09:31:37+00:00",
+        "amount": 1391.56,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 2.759827921750002e-09,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000025846",
+        "timestamp": "2026-02-01T10:10:46+00:00",
+        "amount": 35357.82,
+        "scenario": "hospital_emergency_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.4347439680761909e-08,
+        "tags": [
+          "New payee"
+        ],
+        "selected": true
+      }
+    ]
+  },
+  {
+    "key": "qr_scam",
+    "scenario": "fake_refund_qr",
+    "label": "Fake-refund QR scam",
+    "short_label": "QR scam",
+    "kind": "fraud",
+    "category": "Social engineering",
+    "description": "A refund lure using an unverified QR flow, social-engineering sequence evidence and recipient intelligence.",
+    "source_dataset": "banksim",
+    "recipient_profile": "qr_scam_recipient",
+    "reference_transaction_id": "BS_TXN_0000027850",
+    "payer_id": "BS_CUSTOMER_C1100337763",
+    "payee_id": "BS_MERCHANT_M1741626453",
+    "amount": 46362.26,
+    "payload": {
+      "transaction_id": "WEB-QR_SCAM-BS_TXN_0000027850",
+      "reference_transaction_id": "BS_TXN_0000027850",
+      "simulation_mode": true,
+      "session_id": "S-BS_TXN_0000027850",
+      "timestamp": "2026-02-01T11:44:10+00:00",
+      "payer_id": "BS_CUSTOMER_C1100337763",
+      "payee_id": "BS_MERCHANT_M1741626453",
+      "amount": 46362.26,
+      "payment_mode": "QR",
+      "device_id": "D032804",
+      "vpa_id": "vpa017812@upi",
+      "merchant_id": null,
+      "qr_id": "QR017812",
+      "ip_asn": "AS1054",
+      "latitude": 18.99655756963575,
+      "longitude": 72.88839862739539,
+      "payee_latitude": 18.99655756963575,
+      "payee_longitude": 72.88839862739539,
+      "is_new_payee": true,
+      "qr_verified": false,
+      "collect_request": false,
+      "merchant_category": "PERSONAL",
+      "device_age_days": 631,
+      "sim_age_days": 1991,
+      "app_registration_age_days": 611,
+      "device_known": true,
+      "play_integrity_ok": true,
+      "recent_pin_reset": false,
+      "app_reregistered": false,
+      "remote_access_indicator": false,
+      "overlay_indicator": false,
+      "recipient_complaint_score": 0.031434726433295444,
+      "known_mule": false,
+      "common_owner_verified": false
+    },
+    "offline": {
+      "transaction_id": "BS_TXN_0000027850",
+      "fraud_probability": 1.0,
+      "legitimate_novelty_probability": 0.14944327276831643,
+      "uncertainty": 0.4162818373915333,
+      "recommended_action": "BLOCK",
+      "fraud_types": [],
+      "reason_codes": [],
+      "model_scores": {
+        "rule_risk": 0.6000000238418579,
+        "statistical_anomaly": 0.0,
+        "transaction_fraud": 0.9973202655392128,
+        "legitimate_novelty": 0.14944327276831643,
+        "device_session_risk": 0.0,
+        "sequence_account_takeover": 0.006615398917347193,
+        "sequence_social_engineering": 0.8613478541374207,
+        "graph_mule": 0.16217291687179,
+        "graph_merchant_legitimacy": 0.008934563025832176,
+        "graph_anomaly": 0.6899378708182295,
+        "complaint_intelligence": 0.79,
+        "journey_plausibility": 0.6861355317028535
+      },
+      "latency_ms": 0.0
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "BS_CUSTOMER_C1040405455",
+          "label": "BS_CUSTOMER_C1040405455",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1100337763",
+          "label": "BS_CUSTOMER_C1100337763",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1100361227",
+          "label": "BS_CUSTOMER_C1100361227",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1152092987",
+          "label": "BS_CUSTOMER_C1152092987",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1275518867",
+          "label": "BS_CUSTOMER_C1275518867",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1338396147",
+          "label": "BS_CUSTOMER_C1338396147",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1358079072",
+          "label": "BS_CUSTOMER_C1358079072",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1360481565",
+          "label": "BS_CUSTOMER_C1360481565",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1386324281",
+          "label": "BS_CUSTOMER_C1386324281",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1387946894",
+          "label": "BS_CUSTOMER_C1387946894",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1440340988",
+          "label": "BS_CUSTOMER_C1440340988",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C144835944",
+          "label": "BS_CUSTOMER_C144835944",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1453917071",
+          "label": "BS_CUSTOMER_C1453917071",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1480064437",
+          "label": "BS_CUSTOMER_C1480064437",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1685492470",
+          "label": "BS_CUSTOMER_C1685492470",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1734487337",
+          "label": "BS_CUSTOMER_C1734487337",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1734862058",
+          "label": "BS_CUSTOMER_C1734862058",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1811749392",
+          "label": "BS_CUSTOMER_C1811749392",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1847494890",
+          "label": "BS_CUSTOMER_C1847494890",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1855857061",
+          "label": "BS_CUSTOMER_C1855857061",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1959396051",
+          "label": "BS_CUSTOMER_C1959396051",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2022102158",
+          "label": "BS_CUSTOMER_C2022102158",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C204205576",
+          "label": "BS_CUSTOMER_C204205576",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2143703121",
+          "label": "BS_CUSTOMER_C2143703121",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C288727438",
+          "label": "BS_CUSTOMER_C288727438",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C306641104",
+          "label": "BS_CUSTOMER_C306641104",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C306839491",
+          "label": "BS_CUSTOMER_C306839491",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C463841109",
+          "label": "BS_CUSTOMER_C463841109",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C47809392",
+          "label": "BS_CUSTOMER_C47809392",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C515668508",
+          "label": "BS_CUSTOMER_C515668508",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C623466885",
+          "label": "BS_CUSTOMER_C623466885",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C706956926",
+          "label": "BS_CUSTOMER_C706956926",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C849342403",
+          "label": "BS_CUSTOMER_C849342403",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C869807132",
+          "label": "BS_CUSTOMER_C869807132",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C967677653",
+          "label": "BS_CUSTOMER_C967677653",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C994449484",
+          "label": "BS_CUSTOMER_C994449484",
+          "type": "payer"
+        },
+        {
+          "id": "BS_MERCHANT_M1741626453",
+          "label": "BS_MERCHANT_M1741626453",
+          "type": "target"
+        }
+      ],
+      "edges": [
+        {
+          "id": "e0",
+          "source": "BS_CUSTOMER_C515668508",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 45951.11,
+          "count": 2
+        },
+        {
+          "id": "e1",
+          "source": "BS_CUSTOMER_C1275518867",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 117336.04,
+          "count": 1
+        },
+        {
+          "id": "e2",
+          "source": "BS_CUSTOMER_C204205576",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 116519.58,
+          "count": 1
+        },
+        {
+          "id": "e3",
+          "source": "BS_CUSTOMER_C47809392",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 81983.9,
+          "count": 1
+        },
+        {
+          "id": "e4",
+          "source": "BS_CUSTOMER_C1734487337",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 70466.36,
+          "count": 1
+        },
+        {
+          "id": "e5",
+          "source": "BS_CUSTOMER_C706956926",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 54946.84,
+          "count": 1
+        },
+        {
+          "id": "e6",
+          "source": "BS_CUSTOMER_C1100361227",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 52641.0,
+          "count": 1
+        },
+        {
+          "id": "e7",
+          "source": "BS_CUSTOMER_C1360481565",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 51934.2,
+          "count": 1
+        },
+        {
+          "id": "e8",
+          "source": "BS_CUSTOMER_C288727438",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 50644.16,
+          "count": 1
+        },
+        {
+          "id": "e9",
+          "source": "BS_CUSTOMER_C967677653",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 49385.26,
+          "count": 1
+        },
+        {
+          "id": "e10",
+          "source": "BS_CUSTOMER_C869807132",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 48707.91,
+          "count": 1
+        },
+        {
+          "id": "e11",
+          "source": "BS_CUSTOMER_C144835944",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 47550.11,
+          "count": 1
+        },
+        {
+          "id": "e12",
+          "source": "BS_CUSTOMER_C306839491",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 47443.8,
+          "count": 1
+        },
+        {
+          "id": "e13",
+          "source": "BS_CUSTOMER_C1338396147",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 47216.66,
+          "count": 1
+        },
+        {
+          "id": "e14",
+          "source": "BS_CUSTOMER_C2022102158",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 47043.59,
+          "count": 1
+        },
+        {
+          "id": "e15",
+          "source": "BS_CUSTOMER_C1100337763",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 46362.26,
+          "count": 1
+        },
+        {
+          "id": "e16",
+          "source": "BS_CUSTOMER_C1440340988",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 42869.93,
+          "count": 1
+        },
+        {
+          "id": "e17",
+          "source": "BS_CUSTOMER_C1959396051",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 34554.95,
+          "count": 1
+        },
+        {
+          "id": "e18",
+          "source": "BS_CUSTOMER_C1040405455",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 33504.69,
+          "count": 1
+        },
+        {
+          "id": "e19",
+          "source": "BS_CUSTOMER_C1386324281",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 32917.41,
+          "count": 1
+        },
+        {
+          "id": "e20",
+          "source": "BS_CUSTOMER_C2143703121",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 30956.63,
+          "count": 1
+        },
+        {
+          "id": "e21",
+          "source": "BS_CUSTOMER_C1685492470",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 29011.4,
+          "count": 1
+        },
+        {
+          "id": "e22",
+          "source": "BS_CUSTOMER_C306641104",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 27595.63,
+          "count": 1
+        },
+        {
+          "id": "e23",
+          "source": "BS_CUSTOMER_C623466885",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 26597.8,
+          "count": 1
+        },
+        {
+          "id": "e24",
+          "source": "BS_CUSTOMER_C463841109",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 25281.78,
+          "count": 1
+        },
+        {
+          "id": "e25",
+          "source": "BS_CUSTOMER_C1453917071",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 22174.85,
+          "count": 1
+        },
+        {
+          "id": "e26",
+          "source": "BS_CUSTOMER_C1358079072",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 18679.67,
+          "count": 1
+        },
+        {
+          "id": "e27",
+          "source": "BS_CUSTOMER_C1855857061",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 15978.55,
+          "count": 1
+        },
+        {
+          "id": "e28",
+          "source": "BS_CUSTOMER_C1152092987",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 15081.58,
+          "count": 1
+        },
+        {
+          "id": "e29",
+          "source": "BS_CUSTOMER_C1480064437",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 12944.47,
+          "count": 1
+        },
+        {
+          "id": "e30",
+          "source": "BS_CUSTOMER_C1811749392",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 12915.21,
+          "count": 1
+        },
+        {
+          "id": "e31",
+          "source": "BS_CUSTOMER_C994449484",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 7174.46,
+          "count": 1
+        },
+        {
+          "id": "e32",
+          "source": "BS_CUSTOMER_C849342403",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 6666.15,
+          "count": 1
+        },
+        {
+          "id": "e33",
+          "source": "BS_CUSTOMER_C1847494890",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 6310.83,
+          "count": 1
+        },
+        {
+          "id": "e34",
+          "source": "BS_CUSTOMER_C1734862058",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 4996.99,
+          "count": 1
+        },
+        {
+          "id": "e35",
+          "source": "BS_CUSTOMER_C1387946894",
+          "target": "BS_MERCHANT_M1741626453",
+          "amount": 226.66,
+          "count": 1
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "transaction_id": "BS_TXN_0000005692",
+        "timestamp": "2026-02-01T02:34:52+00:00",
+        "amount": 153.19,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 0.029880668967962265,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000010507",
+        "timestamp": "2026-02-01T04:55:07+00:00",
+        "amount": 1.94,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 0.0009602869977243245,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000027332",
+        "timestamp": "2026-02-01T10:35:32+00:00",
+        "amount": 14792.41,
+        "scenario": "remote_access_scam",
+        "action": "BLOCK",
+        "fraud_probability": 1.0,
+        "tags": [
+          "App re-registered",
+          "Remote access",
+          "Overlay detected"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000027850",
+        "timestamp": "2026-02-01T11:44:10+00:00",
+        "amount": 46362.26,
+        "scenario": "fake_refund_qr",
+        "action": "BLOCK",
+        "fraud_probability": 1.0,
+        "tags": [
+          "New payee",
+          "Unverified QR"
+        ],
+        "selected": true
+      }
+    ]
+  },
+  {
+    "key": "account_takeover",
+    "scenario": "account_takeover",
+    "label": "Account takeover",
+    "short_label": "ATO",
+    "kind": "fraud",
+    "category": "Identity & device",
+    "description": "A compromised customer session where temporal behaviour, device signals and journey inconsistencies matter more than one row alone.",
+    "source_dataset": "paysim",
+    "recipient_profile": "qr_scam_recipient",
+    "reference_transaction_id": "PS_TXN_0000024966",
+    "payer_id": "PS_C1198040187",
+    "payee_id": "PS_C1828047633",
+    "amount": 76221.36,
+    "payload": {
+      "transaction_id": "WEB-ACCOUNT_TAKEOVER-PS_TXN_0000024966",
+      "reference_transaction_id": "PS_TXN_0000024966",
+      "simulation_mode": true,
+      "session_id": "S-PS_TXN_0000024966",
+      "timestamp": "2026-01-01T08:56:06+00:00",
+      "payer_id": "PS_C1198040187",
+      "payee_id": "PS_C1828047633",
+      "amount": 76221.36,
+      "payment_mode": "P2P",
+      "device_id": "D028831",
+      "vpa_id": "vpa017191@upi",
+      "merchant_id": null,
+      "qr_id": "QR017191",
+      "ip_asn": "AS1081",
+      "latitude": 18.596609470448286,
+      "longitude": 73.58192071864276,
+      "payee_latitude": 18.596609470448286,
+      "payee_longitude": 73.58192071864276,
+      "is_new_payee": true,
+      "qr_verified": false,
+      "collect_request": false,
+      "merchant_category": "PERSONAL",
+      "device_age_days": 41,
+      "sim_age_days": 62,
+      "app_registration_age_days": 23,
+      "device_known": true,
+      "play_integrity_ok": true,
+      "recent_pin_reset": true,
+      "app_reregistered": false,
+      "remote_access_indicator": false,
+      "overlay_indicator": false,
+      "recipient_complaint_score": 0.0018391149503539834,
+      "known_mule": false,
+      "common_owner_verified": false
+    },
+    "offline": {
+      "transaction_id": "PS_TXN_0000024966",
+      "fraud_probability": 0.9999971389770508,
+      "legitimate_novelty_probability": 0.00556532446273143,
+      "uncertainty": 0.5893249201774597,
+      "recommended_action": "HOLD",
+      "fraud_types": [],
+      "reason_codes": [],
+      "model_scores": {
+        "rule_risk": 0.0,
+        "statistical_anomaly": 0.0,
+        "transaction_fraud": 0.9997093930895716,
+        "legitimate_novelty": 0.00556532446273143,
+        "device_session_risk": 0.2,
+        "sequence_account_takeover": 0.9954043626785278,
+        "sequence_social_engineering": 0.010703867301344872,
+        "graph_mule": 0.1796418410834774,
+        "graph_merchant_legitimacy": 0.18966296315193176,
+        "graph_anomaly": 1.0,
+        "complaint_intelligence": 0.0,
+        "journey_plausibility": 0.04659303334831749
+      },
+      "latency_ms": 0.0
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "PS_C1198040187",
+          "label": "PS_C1198040187",
+          "type": "payer"
+        },
+        {
+          "id": "PS_C1828047633",
+          "label": "PS_C1828047633",
+          "type": "target"
+        }
+      ],
+      "edges": [
+        {
+          "id": "e0",
+          "source": "PS_C1198040187",
+          "target": "PS_C1828047633",
+          "amount": 76221.36,
+          "count": 1
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "transaction_id": "PS_TXN_0000024966",
+        "timestamp": "2026-01-01T08:56:06+00:00",
+        "amount": 76221.36,
+        "scenario": "account_takeover",
+        "action": "HOLD",
+        "fraud_probability": 0.9999971389770508,
+        "tags": [
+          "New payee",
+          "PIN reset"
+        ],
+        "selected": true
+      }
+    ]
+  },
+  {
+    "key": "mule",
+    "scenario": "mule_directed",
+    "label": "Mule-directed payment",
+    "short_label": "Mule",
+    "kind": "fraud",
+    "category": "Graph & recipient",
+    "description": "A transfer to a suspicious recipient where transaction, graph anomaly, complaint and merchant-trust evidence are fused.",
+    "source_dataset": "banksim",
+    "recipient_profile": "money_mule",
+    "reference_transaction_id": "BS_TXN_0000025517",
+    "payer_id": "BS_CUSTOMER_C1464489812",
+    "payee_id": "BS_MERCHANT_M980657600",
+    "amount": 30407.38,
+    "payload": {
+      "transaction_id": "WEB-MULE-BS_TXN_0000025517",
+      "reference_transaction_id": "BS_TXN_0000025517",
+      "simulation_mode": true,
+      "session_id": "S-BS_TXN_0000025517",
+      "timestamp": "2026-02-01T10:05:17+00:00",
+      "payer_id": "BS_CUSTOMER_C1464489812",
+      "payee_id": "BS_MERCHANT_M980657600",
+      "amount": 30407.38,
+      "payment_mode": "P2M",
+      "device_id": "D032436",
+      "vpa_id": "vpa017823@upi",
+      "merchant_id": null,
+      "qr_id": "QR017823",
+      "ip_asn": "AS1186",
+      "latitude": 18.904920163612214,
+      "longitude": 72.84807380343541,
+      "payee_latitude": 18.904920163612214,
+      "payee_longitude": 72.84807380343541,
+      "is_new_payee": true,
+      "qr_verified": true,
+      "collect_request": false,
+      "merchant_category": "PERSONAL",
+      "device_age_days": 1219,
+      "sim_age_days": 1053,
+      "app_registration_age_days": 12,
+      "device_known": true,
+      "play_integrity_ok": true,
+      "recent_pin_reset": false,
+      "app_reregistered": false,
+      "remote_access_indicator": false,
+      "overlay_indicator": false,
+      "recipient_complaint_score": 0.022516936635649045,
+      "known_mule": false,
+      "common_owner_verified": false
+    },
+    "offline": {
+      "transaction_id": "BS_TXN_0000025517",
+      "fraud_probability": 0.999927282333374,
+      "legitimate_novelty_probability": 0.2989813893159012,
+      "uncertainty": 0.4051644187071346,
+      "recommended_action": "BLOCK",
+      "fraud_types": [],
+      "reason_codes": [],
+      "model_scores": {
+        "rule_risk": 0.0,
+        "statistical_anomaly": 0.0,
+        "transaction_fraud": 0.9991152072566929,
+        "legitimate_novelty": 0.2989813893159012,
+        "device_session_risk": 0.0,
+        "sequence_account_takeover": 0.000711751461494714,
+        "sequence_social_engineering": 0.0027945281472057104,
+        "graph_mule": 0.24521375942849508,
+        "graph_merchant_legitimacy": 0.010875324718654156,
+        "graph_anomaly": 0.7074693473831963,
+        "complaint_intelligence": 0.63,
+        "journey_plausibility": 0.7720873614579868
+      },
+      "latency_ms": 0.0
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "BS_CUSTOMER_C1050458046",
+          "label": "BS_CUSTOMER_C1050458046",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C126638730",
+          "label": "BS_CUSTOMER_C126638730",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1273692645",
+          "label": "BS_CUSTOMER_C1273692645",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1275518867",
+          "label": "BS_CUSTOMER_C1275518867",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1312615175",
+          "label": "BS_CUSTOMER_C1312615175",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1338125837",
+          "label": "BS_CUSTOMER_C1338125837",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1338396147",
+          "label": "BS_CUSTOMER_C1338396147",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1358079072",
+          "label": "BS_CUSTOMER_C1358079072",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1423519115",
+          "label": "BS_CUSTOMER_C1423519115",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1464489812",
+          "label": "BS_CUSTOMER_C1464489812",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1476505660",
+          "label": "BS_CUSTOMER_C1476505660",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1560676680",
+          "label": "BS_CUSTOMER_C1560676680",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1572610482",
+          "label": "BS_CUSTOMER_C1572610482",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C16723337",
+          "label": "BS_CUSTOMER_C16723337",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C176878772",
+          "label": "BS_CUSTOMER_C176878772",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1859195979",
+          "label": "BS_CUSTOMER_C1859195979",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1978250683",
+          "label": "BS_CUSTOMER_C1978250683",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C346030769",
+          "label": "BS_CUSTOMER_C346030769",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C374616385",
+          "label": "BS_CUSTOMER_C374616385",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C375144053",
+          "label": "BS_CUSTOMER_C375144053",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C445134555",
+          "label": "BS_CUSTOMER_C445134555",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C46027917",
+          "label": "BS_CUSTOMER_C46027917",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C473451132",
+          "label": "BS_CUSTOMER_C473451132",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C512338137",
+          "label": "BS_CUSTOMER_C512338137",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C515668508",
+          "label": "BS_CUSTOMER_C515668508",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C553434543",
+          "label": "BS_CUSTOMER_C553434543",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C60026962",
+          "label": "BS_CUSTOMER_C60026962",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C616472041",
+          "label": "BS_CUSTOMER_C616472041",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C655866157",
+          "label": "BS_CUSTOMER_C655866157",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C704456922",
+          "label": "BS_CUSTOMER_C704456922",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C783189419",
+          "label": "BS_CUSTOMER_C783189419",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C810002129",
+          "label": "BS_CUSTOMER_C810002129",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C831905583",
+          "label": "BS_CUSTOMER_C831905583",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C85075290",
+          "label": "BS_CUSTOMER_C85075290",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C880299982",
+          "label": "BS_CUSTOMER_C880299982",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C900337975",
+          "label": "BS_CUSTOMER_C900337975",
+          "type": "payer"
+        },
+        {
+          "id": "BS_MERCHANT_M980657600",
+          "label": "BS_MERCHANT_M980657600",
+          "type": "target"
+        }
+      ],
+      "edges": [
+        {
+          "id": "e0",
+          "source": "BS_CUSTOMER_C1464489812",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 172127.76,
+          "count": 6
+        },
+        {
+          "id": "e1",
+          "source": "BS_CUSTOMER_C515668508",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 148518.75999999998,
+          "count": 4
+        },
+        {
+          "id": "e2",
+          "source": "BS_CUSTOMER_C1572610482",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 144294.73,
+          "count": 4
+        },
+        {
+          "id": "e3",
+          "source": "BS_CUSTOMER_C1275518867",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 104377.73000000001,
+          "count": 3
+        },
+        {
+          "id": "e4",
+          "source": "BS_CUSTOMER_C1312615175",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 70727.3,
+          "count": 3
+        },
+        {
+          "id": "e5",
+          "source": "BS_CUSTOMER_C1338125837",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 168554.58,
+          "count": 2
+        },
+        {
+          "id": "e6",
+          "source": "BS_CUSTOMER_C1859195979",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 114554.98,
+          "count": 2
+        },
+        {
+          "id": "e7",
+          "source": "BS_CUSTOMER_C346030769",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 100091.85,
+          "count": 2
+        },
+        {
+          "id": "e8",
+          "source": "BS_CUSTOMER_C176878772",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 81603.07,
+          "count": 1
+        },
+        {
+          "id": "e9",
+          "source": "BS_CUSTOMER_C60026962",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 81563.73,
+          "count": 1
+        },
+        {
+          "id": "e10",
+          "source": "BS_CUSTOMER_C1358079072",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 80936.63,
+          "count": 1
+        },
+        {
+          "id": "e11",
+          "source": "BS_CUSTOMER_C375144053",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 79859.1,
+          "count": 1
+        },
+        {
+          "id": "e12",
+          "source": "BS_CUSTOMER_C1560676680",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 73496.61,
+          "count": 1
+        },
+        {
+          "id": "e13",
+          "source": "BS_CUSTOMER_C880299982",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 72650.51,
+          "count": 1
+        },
+        {
+          "id": "e14",
+          "source": "BS_CUSTOMER_C473451132",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 66958.56,
+          "count": 1
+        },
+        {
+          "id": "e15",
+          "source": "BS_CUSTOMER_C810002129",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 57340.93,
+          "count": 1
+        },
+        {
+          "id": "e16",
+          "source": "BS_CUSTOMER_C126638730",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 56770.35,
+          "count": 1
+        },
+        {
+          "id": "e17",
+          "source": "BS_CUSTOMER_C655866157",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 56707.27,
+          "count": 1
+        },
+        {
+          "id": "e18",
+          "source": "BS_CUSTOMER_C16723337",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 53349.91,
+          "count": 1
+        },
+        {
+          "id": "e19",
+          "source": "BS_CUSTOMER_C1338396147",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 52392.07,
+          "count": 1
+        },
+        {
+          "id": "e20",
+          "source": "BS_CUSTOMER_C704456922",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 51006.34,
+          "count": 1
+        },
+        {
+          "id": "e21",
+          "source": "BS_CUSTOMER_C783189419",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 42605.92,
+          "count": 1
+        },
+        {
+          "id": "e22",
+          "source": "BS_CUSTOMER_C553434543",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 40301.71,
+          "count": 1
+        },
+        {
+          "id": "e23",
+          "source": "BS_CUSTOMER_C1273692645",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 39488.66,
+          "count": 1
+        },
+        {
+          "id": "e24",
+          "source": "BS_CUSTOMER_C1050458046",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 34944.34,
+          "count": 1
+        },
+        {
+          "id": "e25",
+          "source": "BS_CUSTOMER_C512338137",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 34248.65,
+          "count": 1
+        },
+        {
+          "id": "e26",
+          "source": "BS_CUSTOMER_C1476505660",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 31663.45,
+          "count": 1
+        },
+        {
+          "id": "e27",
+          "source": "BS_CUSTOMER_C900337975",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 28509.56,
+          "count": 1
+        },
+        {
+          "id": "e28",
+          "source": "BS_CUSTOMER_C374616385",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 27001.75,
+          "count": 1
+        },
+        {
+          "id": "e29",
+          "source": "BS_CUSTOMER_C1423519115",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 24429.51,
+          "count": 1
+        },
+        {
+          "id": "e30",
+          "source": "BS_CUSTOMER_C616472041",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 24034.58,
+          "count": 1
+        },
+        {
+          "id": "e31",
+          "source": "BS_CUSTOMER_C85075290",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 20612.82,
+          "count": 1
+        },
+        {
+          "id": "e32",
+          "source": "BS_CUSTOMER_C1978250683",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 20431.6,
+          "count": 1
+        },
+        {
+          "id": "e33",
+          "source": "BS_CUSTOMER_C831905583",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 19895.61,
+          "count": 1
+        },
+        {
+          "id": "e34",
+          "source": "BS_CUSTOMER_C445134555",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 18293.05,
+          "count": 1
+        },
+        {
+          "id": "e35",
+          "source": "BS_CUSTOMER_C46027917",
+          "target": "BS_MERCHANT_M980657600",
+          "amount": 17426.75,
+          "count": 1
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "transaction_id": "BS_TXN_0000017652",
+        "timestamp": "2026-02-01T07:54:12+00:00",
+        "amount": 30967.3,
+        "scenario": "account_takeover",
+        "action": "HOLD",
+        "fraud_probability": 0.9999998807907104,
+        "tags": [
+          "PIN reset",
+          "Unverified QR"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000022451",
+        "timestamp": "2026-02-01T08:14:11+00:00",
+        "amount": 11817.55,
+        "scenario": "mule_directed",
+        "action": "BLOCK",
+        "fraud_probability": 0.9998704195022583,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000022452",
+        "timestamp": "2026-02-01T08:14:12+00:00",
+        "amount": 50092.19,
+        "scenario": "mule_directed",
+        "action": "BLOCK",
+        "fraud_probability": 0.9994533658027649,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000020432",
+        "timestamp": "2026-02-01T08:40:32+00:00",
+        "amount": 24656.37,
+        "scenario": "mule_directed",
+        "action": "BLOCK",
+        "fraud_probability": 0.9998966455459595,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000023365",
+        "timestamp": "2026-02-01T09:29:25+00:00",
+        "amount": 22638.97,
+        "scenario": "mule_directed",
+        "action": "BLOCK",
+        "fraud_probability": 0.9999098777770996,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000024041",
+        "timestamp": "2026-02-01T09:40:41+00:00",
+        "amount": 55111.35,
+        "scenario": "mule_directed",
+        "action": "BLOCK",
+        "fraud_probability": 0.9999463558197021,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000024884",
+        "timestamp": "2026-02-01T09:54:44+00:00",
+        "amount": 42.92,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 0.0033520429860800505,
+        "tags": [
+          "Overlay detected"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000025207",
+        "timestamp": "2026-02-01T10:00:07+00:00",
+        "amount": 7366.24,
+        "scenario": "mule_directed",
+        "action": "BLOCK",
+        "fraud_probability": 0.9999011754989624,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000025216",
+        "timestamp": "2026-02-01T10:00:16+00:00",
+        "amount": 59375.79,
+        "scenario": "remote_access_scam",
+        "action": "BLOCK",
+        "fraud_probability": 0.999985933303833,
+        "tags": [
+          "New payee",
+          "App re-registered",
+          "Overlay detected"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000025517",
+        "timestamp": "2026-02-01T10:05:17+00:00",
+        "amount": 30407.38,
+        "scenario": "mule_directed",
+        "action": "BLOCK",
+        "fraud_probability": 0.999927282333374,
+        "tags": [
+          "New payee"
+        ],
+        "selected": true
+      }
+    ]
+  },
+  {
+    "key": "collect_scam",
+    "scenario": "collect_request_scam",
+    "label": "Fraudulent collect request",
+    "short_label": "Collect",
+    "kind": "fraud",
+    "category": "Social engineering",
+    "description": "A deceptive collect request designed to make the victim approve a payment they believe is an incoming credit.",
+    "source_dataset": "banksim",
+    "recipient_profile": "collect_scam_recipient",
+    "reference_transaction_id": "BS_TXN_0000025500",
+    "payer_id": "BS_CUSTOMER_C1226558289",
+    "payee_id": "BS_MERCHANT_M151143676",
+    "amount": 8162.53,
+    "payload": {
+      "transaction_id": "WEB-COLLECT_SCAM-BS_TXN_0000025500",
+      "reference_transaction_id": "BS_TXN_0000025500",
+      "simulation_mode": true,
+      "session_id": "S-BS_TXN_0000025500",
+      "timestamp": "2026-02-01T10:05:00+00:00",
+      "payer_id": "BS_CUSTOMER_C1226558289",
+      "payee_id": "BS_MERCHANT_M151143676",
+      "amount": 8162.53,
+      "payment_mode": "COLLECT",
+      "device_id": "D033038",
+      "vpa_id": "vpa017810@upi",
+      "merchant_id": null,
+      "qr_id": "QR017810",
+      "ip_asn": "AS1038",
+      "latitude": 18.973717565010002,
+      "longitude": 72.87344693962729,
+      "payee_latitude": 18.973717565010002,
+      "payee_longitude": 72.87344693962729,
+      "is_new_payee": true,
+      "qr_verified": true,
+      "collect_request": true,
+      "merchant_category": "PERSONAL",
+      "device_age_days": 556,
+      "sim_age_days": 226,
+      "app_registration_age_days": 200,
+      "device_known": true,
+      "play_integrity_ok": true,
+      "recent_pin_reset": false,
+      "app_reregistered": false,
+      "remote_access_indicator": true,
+      "overlay_indicator": false,
+      "recipient_complaint_score": 0.05113740363194523,
+      "known_mule": false,
+      "common_owner_verified": false
+    },
+    "offline": {
+      "transaction_id": "BS_TXN_0000025500",
+      "fraud_probability": 1.0,
+      "legitimate_novelty_probability": 0.20878493243799168,
+      "uncertainty": 0.30663876726180306,
+      "recommended_action": "HOLD",
+      "fraud_types": [],
+      "reason_codes": [],
+      "model_scores": {
+        "rule_risk": 0.75,
+        "statistical_anomaly": 0.0,
+        "transaction_fraud": 0.9969351713598266,
+        "legitimate_novelty": 0.20878493243799168,
+        "device_session_risk": 0.15,
+        "sequence_account_takeover": 0.0009020880679599941,
+        "sequence_social_engineering": 0.9433721899986267,
+        "graph_mule": 0.04820491173135992,
+        "graph_merchant_legitimacy": 0.7454380393028259,
+        "graph_anomaly": 0.1418149281839521,
+        "complaint_intelligence": 0.0,
+        "journey_plausibility": 0.7364349895797351
+      },
+      "latency_ms": 0.0
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "BS_CUSTOMER_C1153943594",
+          "label": "BS_CUSTOMER_C1153943594",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1156346576",
+          "label": "BS_CUSTOMER_C1156346576",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1187799344",
+          "label": "BS_CUSTOMER_C1187799344",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1223439629",
+          "label": "BS_CUSTOMER_C1223439629",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1238755034",
+          "label": "BS_CUSTOMER_C1238755034",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1248026439",
+          "label": "BS_CUSTOMER_C1248026439",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C125143024",
+          "label": "BS_CUSTOMER_C125143024",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1272188168",
+          "label": "BS_CUSTOMER_C1272188168",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C135434041",
+          "label": "BS_CUSTOMER_C135434041",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1370669821",
+          "label": "BS_CUSTOMER_C1370669821",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C137986193",
+          "label": "BS_CUSTOMER_C137986193",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1385780363",
+          "label": "BS_CUSTOMER_C1385780363",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1474428806",
+          "label": "BS_CUSTOMER_C1474428806",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1483054025",
+          "label": "BS_CUSTOMER_C1483054025",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1490048317",
+          "label": "BS_CUSTOMER_C1490048317",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1504341710",
+          "label": "BS_CUSTOMER_C1504341710",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1538635916",
+          "label": "BS_CUSTOMER_C1538635916",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1945520078",
+          "label": "BS_CUSTOMER_C1945520078",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C194859196",
+          "label": "BS_CUSTOMER_C194859196",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1965185304",
+          "label": "BS_CUSTOMER_C1965185304",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2051145244",
+          "label": "BS_CUSTOMER_C2051145244",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C210318225",
+          "label": "BS_CUSTOMER_C210318225",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2132932756",
+          "label": "BS_CUSTOMER_C2132932756",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C296630818",
+          "label": "BS_CUSTOMER_C296630818",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C336519851",
+          "label": "BS_CUSTOMER_C336519851",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C47809392",
+          "label": "BS_CUSTOMER_C47809392",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C537330939",
+          "label": "BS_CUSTOMER_C537330939",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C598089944",
+          "label": "BS_CUSTOMER_C598089944",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C620551378",
+          "label": "BS_CUSTOMER_C620551378",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C70991061",
+          "label": "BS_CUSTOMER_C70991061",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C764048448",
+          "label": "BS_CUSTOMER_C764048448",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C801383032",
+          "label": "BS_CUSTOMER_C801383032",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C824676284",
+          "label": "BS_CUSTOMER_C824676284",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C870367228",
+          "label": "BS_CUSTOMER_C870367228",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C92426600",
+          "label": "BS_CUSTOMER_C92426600",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C928481238",
+          "label": "BS_CUSTOMER_C928481238",
+          "type": "payer"
+        },
+        {
+          "id": "BS_MERCHANT_M151143676",
+          "label": "BS_MERCHANT_M151143676",
+          "type": "target"
+        }
+      ],
+      "edges": [
+        {
+          "id": "e0",
+          "source": "BS_CUSTOMER_C336519851",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 40051.72,
+          "count": 1
+        },
+        {
+          "id": "e1",
+          "source": "BS_CUSTOMER_C1945520078",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 37766.05,
+          "count": 1
+        },
+        {
+          "id": "e2",
+          "source": "BS_CUSTOMER_C801383032",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 37362.36,
+          "count": 1
+        },
+        {
+          "id": "e3",
+          "source": "BS_CUSTOMER_C1238755034",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 37106.04,
+          "count": 1
+        },
+        {
+          "id": "e4",
+          "source": "BS_CUSTOMER_C194859196",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 36638.7,
+          "count": 1
+        },
+        {
+          "id": "e5",
+          "source": "BS_CUSTOMER_C764048448",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 36506.62,
+          "count": 1
+        },
+        {
+          "id": "e6",
+          "source": "BS_CUSTOMER_C1483054025",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 33840.67,
+          "count": 1
+        },
+        {
+          "id": "e7",
+          "source": "BS_CUSTOMER_C210318225",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 33752.2,
+          "count": 1
+        },
+        {
+          "id": "e8",
+          "source": "BS_CUSTOMER_C598089944",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 32973.65,
+          "count": 1
+        },
+        {
+          "id": "e9",
+          "source": "BS_CUSTOMER_C537330939",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 32891.54,
+          "count": 1
+        },
+        {
+          "id": "e10",
+          "source": "BS_CUSTOMER_C125143024",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 30187.28,
+          "count": 1
+        },
+        {
+          "id": "e11",
+          "source": "BS_CUSTOMER_C1385780363",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 30167.86,
+          "count": 1
+        },
+        {
+          "id": "e12",
+          "source": "BS_CUSTOMER_C1156346576",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 30149.66,
+          "count": 1
+        },
+        {
+          "id": "e13",
+          "source": "BS_CUSTOMER_C47809392",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 29753.4,
+          "count": 1
+        },
+        {
+          "id": "e14",
+          "source": "BS_CUSTOMER_C137986193",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 27307.94,
+          "count": 1
+        },
+        {
+          "id": "e15",
+          "source": "BS_CUSTOMER_C870367228",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 27039.84,
+          "count": 1
+        },
+        {
+          "id": "e16",
+          "source": "BS_CUSTOMER_C1504341710",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 25212.11,
+          "count": 1
+        },
+        {
+          "id": "e17",
+          "source": "BS_CUSTOMER_C1965185304",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 24073.69,
+          "count": 1
+        },
+        {
+          "id": "e18",
+          "source": "BS_CUSTOMER_C1474428806",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 22557.42,
+          "count": 1
+        },
+        {
+          "id": "e19",
+          "source": "BS_CUSTOMER_C296630818",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 21447.42,
+          "count": 1
+        },
+        {
+          "id": "e20",
+          "source": "BS_CUSTOMER_C1370669821",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 21250.96,
+          "count": 1
+        },
+        {
+          "id": "e21",
+          "source": "BS_CUSTOMER_C1223439629",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 19366.13,
+          "count": 1
+        },
+        {
+          "id": "e22",
+          "source": "BS_CUSTOMER_C1248026439",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 18906.33,
+          "count": 1
+        },
+        {
+          "id": "e23",
+          "source": "BS_CUSTOMER_C620551378",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 18778.9,
+          "count": 1
+        },
+        {
+          "id": "e24",
+          "source": "BS_CUSTOMER_C1490048317",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 18676.19,
+          "count": 1
+        },
+        {
+          "id": "e25",
+          "source": "BS_CUSTOMER_C2132932756",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 18201.87,
+          "count": 1
+        },
+        {
+          "id": "e26",
+          "source": "BS_CUSTOMER_C70991061",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 17836.96,
+          "count": 1
+        },
+        {
+          "id": "e27",
+          "source": "BS_CUSTOMER_C1153943594",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 17563.08,
+          "count": 1
+        },
+        {
+          "id": "e28",
+          "source": "BS_CUSTOMER_C1538635916",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 17500.82,
+          "count": 1
+        },
+        {
+          "id": "e29",
+          "source": "BS_CUSTOMER_C928481238",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 16986.48,
+          "count": 1
+        },
+        {
+          "id": "e30",
+          "source": "BS_CUSTOMER_C2051145244",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 16613.78,
+          "count": 1
+        },
+        {
+          "id": "e31",
+          "source": "BS_CUSTOMER_C92426600",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 16324.44,
+          "count": 1
+        },
+        {
+          "id": "e32",
+          "source": "BS_CUSTOMER_C824676284",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 16063.25,
+          "count": 1
+        },
+        {
+          "id": "e33",
+          "source": "BS_CUSTOMER_C1272188168",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 15605.14,
+          "count": 1
+        },
+        {
+          "id": "e34",
+          "source": "BS_CUSTOMER_C1187799344",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 14818.48,
+          "count": 1
+        },
+        {
+          "id": "e35",
+          "source": "BS_CUSTOMER_C135434041",
+          "target": "BS_MERCHANT_M151143676",
+          "amount": 14601.84,
+          "count": 1
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "transaction_id": "BS_TXN_0000009878",
+        "timestamp": "2026-02-01T04:44:38+00:00",
+        "amount": 16.55,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 0.0018892176449298859,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000012964",
+        "timestamp": "2026-02-01T05:36:04+00:00",
+        "amount": 2157.9,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 3.669829995445184e-09,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000015853",
+        "timestamp": "2026-02-01T06:24:13+00:00",
+        "amount": 632.49,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.579572805887608e-09,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000019587",
+        "timestamp": "2026-02-01T07:26:27+00:00",
+        "amount": 24.93,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 2.8726367951037446e-09,
+        "tags": [
+          "New payee",
+          "Unverified QR"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000020726",
+        "timestamp": "2026-02-01T08:45:26+00:00",
+        "amount": 36.08,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.3069982287561288e-06,
+        "tags": [
+          "PIN reset"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000024001",
+        "timestamp": "2026-02-01T09:40:01+00:00",
+        "amount": 1267.74,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.7308617872302534e-09,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000025500",
+        "timestamp": "2026-02-01T10:05:00+00:00",
+        "amount": 8162.53,
+        "scenario": "collect_request_scam",
+        "action": "HOLD",
+        "fraud_probability": 1.0,
+        "tags": [
+          "New payee",
+          "Remote access",
+          "Collect request"
+        ],
+        "selected": true
+      }
+    ]
+  },
+  {
+    "key": "remote_access",
+    "scenario": "remote_access_scam",
+    "label": "Remote-access scam",
+    "short_label": "Remote",
+    "kind": "fraud",
+    "category": "Device & session",
+    "description": "A payment occurring in a remote-control compromise pattern with sequence, device and social-engineering evidence.",
+    "source_dataset": "paysim",
+    "recipient_profile": "remote_scam_recipient",
+    "reference_transaction_id": "PS_TXN_0000028144",
+    "payer_id": "PS_C1481350810",
+    "payee_id": "PS_C1886938557",
+    "amount": 80180.69,
+    "payload": {
+      "transaction_id": "WEB-REMOTE_ACCESS-PS_TXN_0000028144",
+      "reference_transaction_id": "PS_TXN_0000028144",
+      "simulation_mode": true,
+      "session_id": "S-PS_TXN_0000028144",
+      "timestamp": "2026-01-01T08:49:04+00:00",
+      "payer_id": "PS_C1481350810",
+      "payee_id": "PS_C1886938557",
+      "amount": 80180.69,
+      "payment_mode": "P2M",
+      "device_id": "D026978",
+      "vpa_id": "vpa002796@upi",
+      "merchant_id": null,
+      "qr_id": "QR002796",
+      "ip_asn": "AS1228",
+      "latitude": 18.81995850205972,
+      "longitude": 71.552064692872,
+      "payee_latitude": 18.81995850205972,
+      "payee_longitude": 71.552064692872,
+      "is_new_payee": true,
+      "qr_verified": true,
+      "collect_request": false,
+      "merchant_category": "PERSONAL",
+      "device_age_days": 33,
+      "sim_age_days": 65,
+      "app_registration_age_days": 27,
+      "device_known": true,
+      "play_integrity_ok": false,
+      "recent_pin_reset": true,
+      "app_reregistered": false,
+      "remote_access_indicator": true,
+      "overlay_indicator": true,
+      "recipient_complaint_score": 0.006962791454119477,
+      "known_mule": false,
+      "common_owner_verified": false
+    },
+    "offline": {
+      "transaction_id": "PS_TXN_0000028144",
+      "fraud_probability": 1.0,
+      "legitimate_novelty_probability": 0.004467656639544523,
+      "uncertainty": 0.38477287871419125,
+      "recommended_action": "BLOCK",
+      "fraud_types": [],
+      "reason_codes": [],
+      "model_scores": {
+        "rule_risk": 0.0,
+        "statistical_anomaly": 0.0,
+        "transaction_fraud": 0.9998642182879554,
+        "legitimate_novelty": 0.004467656639544523,
+        "device_session_risk": 0.5499999999999999,
+        "sequence_account_takeover": 0.0023944322019815445,
+        "sequence_social_engineering": 0.9797955751419067,
+        "graph_mule": 0.00783737141016513,
+        "graph_merchant_legitimacy": 0.35371413826942444,
+        "graph_anomaly": 0.11727170830161913,
+        "complaint_intelligence": 0.0,
+        "journey_plausibility": 0.33716725277231363
+      },
+      "latency_ms": 0.0
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "PS_C1481350810",
+          "label": "PS_C1481350810",
+          "type": "payer"
+        },
+        {
+          "id": "PS_C1788510436",
+          "label": "PS_C1788510436",
+          "type": "payer"
+        },
+        {
+          "id": "PS_C1886938557",
+          "label": "PS_C1886938557",
+          "type": "target"
+        },
+        {
+          "id": "PS_C96749807",
+          "label": "PS_C96749807",
+          "type": "payer"
+        }
+      ],
+      "edges": [
+        {
+          "id": "e0",
+          "source": "PS_C1481350810",
+          "target": "PS_C1886938557",
+          "amount": 80180.69,
+          "count": 1
+        },
+        {
+          "id": "e1",
+          "source": "PS_C96749807",
+          "target": "PS_C1886938557",
+          "amount": 54989.36,
+          "count": 1
+        },
+        {
+          "id": "e2",
+          "source": "PS_C1788510436",
+          "target": "PS_C1886938557",
+          "amount": 10767.56,
+          "count": 1
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "transaction_id": "PS_TXN_0000028144",
+        "timestamp": "2026-01-01T08:49:04+00:00",
+        "amount": 80180.69,
+        "scenario": "remote_access_scam",
+        "action": "BLOCK",
+        "fraud_probability": 1.0,
+        "tags": [
+          "New payee",
+          "PIN reset",
+          "Remote access",
+          "Overlay detected"
+        ],
+        "selected": true
+      }
+    ]
+  },
+  {
+    "key": "legitimate_split",
+    "scenario": "legitimate_split_payment",
+    "label": "Legitimate split payment",
+    "short_label": "Split legit",
+    "kind": "legitimate",
+    "category": "Hard negative",
+    "description": "Several related payments that resemble structuring but have legitimate context and should avoid unnecessary intervention.",
+    "source_dataset": "banksim",
+    "recipient_profile": "merchant",
+    "reference_transaction_id": "BS_TXN_0000028276",
+    "payer_id": "BS_CUSTOMER_C1313060996",
+    "payee_id": "BS_MERCHANT_M1600850729",
+    "amount": 9553.3,
+    "payload": {
+      "transaction_id": "WEB-LEGITIMATE_SPLIT-BS_TXN_0000028276",
+      "reference_transaction_id": "BS_TXN_0000028276",
+      "simulation_mode": true,
+      "session_id": "S-BS_TXN_0000028276",
+      "timestamp": "2026-02-01T11:51:16+00:00",
+      "payer_id": "BS_CUSTOMER_C1313060996",
+      "payee_id": "BS_MERCHANT_M1600850729",
+      "amount": 9553.3,
+      "payment_mode": "QR",
+      "device_id": "D030150",
+      "vpa_id": "vpa017837@upi",
+      "merchant_id": "MBS_MERCHANT_M1600850729",
+      "qr_id": "QR017837",
+      "ip_asn": "AS1150",
+      "latitude": 19.15176259161789,
+      "longitude": 72.9153179236389,
+      "payee_latitude": 19.15176259161789,
+      "payee_longitude": 72.9153179236389,
+      "is_new_payee": true,
+      "qr_verified": true,
+      "collect_request": false,
+      "merchant_category": "ES_FASHION",
+      "device_age_days": 797,
+      "sim_age_days": 1731,
+      "app_registration_age_days": 289,
+      "device_known": true,
+      "play_integrity_ok": true,
+      "recent_pin_reset": false,
+      "app_reregistered": false,
+      "remote_access_indicator": false,
+      "overlay_indicator": false,
+      "recipient_complaint_score": 0.05120276274942581,
+      "known_mule": false,
+      "common_owner_verified": false
+    },
+    "offline": {
+      "transaction_id": "BS_TXN_0000028276",
+      "fraud_probability": 3.4747694144243724e-07,
+      "legitimate_novelty_probability": 0.9679754219734328,
+      "uncertainty": 0.16398027366397372,
+      "recommended_action": "ALLOW",
+      "fraud_types": [],
+      "reason_codes": [],
+      "model_scores": {
+        "rule_risk": 0.0,
+        "statistical_anomaly": 0.0,
+        "transaction_fraud": 0.12529507120643268,
+        "legitimate_novelty": 0.9679754219734328,
+        "device_session_risk": 0.0,
+        "sequence_account_takeover": 0.0002765876706689596,
+        "sequence_social_engineering": 0.0035478128120303154,
+        "graph_mule": 0.02382559244354829,
+        "graph_merchant_legitimacy": 0.863946795463562,
+        "graph_anomaly": 0.2385002725550695,
+        "complaint_intelligence": 0.0,
+        "journey_plausibility": 0.8384712370045602
+      },
+      "latency_ms": 0.0
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "BS_CUSTOMER_C1017941602",
+          "label": "BS_CUSTOMER_C1017941602",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1055224400",
+          "label": "BS_CUSTOMER_C1055224400",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1082462651",
+          "label": "BS_CUSTOMER_C1082462651",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1092769857",
+          "label": "BS_CUSTOMER_C1092769857",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C109947606",
+          "label": "BS_CUSTOMER_C109947606",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C126603077",
+          "label": "BS_CUSTOMER_C126603077",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1304285526",
+          "label": "BS_CUSTOMER_C1304285526",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1307916597",
+          "label": "BS_CUSTOMER_C1307916597",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1313060996",
+          "label": "BS_CUSTOMER_C1313060996",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1366869967",
+          "label": "BS_CUSTOMER_C1366869967",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1439880421",
+          "label": "BS_CUSTOMER_C1439880421",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1506066038",
+          "label": "BS_CUSTOMER_C1506066038",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C15276068",
+          "label": "BS_CUSTOMER_C15276068",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1529774854",
+          "label": "BS_CUSTOMER_C1529774854",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1546820736",
+          "label": "BS_CUSTOMER_C1546820736",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1591612680",
+          "label": "BS_CUSTOMER_C1591612680",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1632932485",
+          "label": "BS_CUSTOMER_C1632932485",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1642006830",
+          "label": "BS_CUSTOMER_C1642006830",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1711218892",
+          "label": "BS_CUSTOMER_C1711218892",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1786430014",
+          "label": "BS_CUSTOMER_C1786430014",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1814746822",
+          "label": "BS_CUSTOMER_C1814746822",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1847111025",
+          "label": "BS_CUSTOMER_C1847111025",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1862169273",
+          "label": "BS_CUSTOMER_C1862169273",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1960297159",
+          "label": "BS_CUSTOMER_C1960297159",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2011457912",
+          "label": "BS_CUSTOMER_C2011457912",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2106115023",
+          "label": "BS_CUSTOMER_C2106115023",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2137070408",
+          "label": "BS_CUSTOMER_C2137070408",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C35785606",
+          "label": "BS_CUSTOMER_C35785606",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C476477241",
+          "label": "BS_CUSTOMER_C476477241",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C480961011",
+          "label": "BS_CUSTOMER_C480961011",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C531360588",
+          "label": "BS_CUSTOMER_C531360588",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C532292379",
+          "label": "BS_CUSTOMER_C532292379",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C616528518",
+          "label": "BS_CUSTOMER_C616528518",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C668875156",
+          "label": "BS_CUSTOMER_C668875156",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C735039923",
+          "label": "BS_CUSTOMER_C735039923",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C979437396",
+          "label": "BS_CUSTOMER_C979437396",
+          "type": "payer"
+        },
+        {
+          "id": "BS_MERCHANT_M1600850729",
+          "label": "BS_MERCHANT_M1600850729",
+          "type": "target"
+        }
+      ],
+      "edges": [
+        {
+          "id": "e0",
+          "source": "BS_CUSTOMER_C1711218892",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 20997.11,
+          "count": 1
+        },
+        {
+          "id": "e1",
+          "source": "BS_CUSTOMER_C1366869967",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 13790.99,
+          "count": 1
+        },
+        {
+          "id": "e2",
+          "source": "BS_CUSTOMER_C126603077",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 10343.13,
+          "count": 1
+        },
+        {
+          "id": "e3",
+          "source": "BS_CUSTOMER_C1313060996",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 9553.3,
+          "count": 1
+        },
+        {
+          "id": "e4",
+          "source": "BS_CUSTOMER_C1092769857",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 2467.38,
+          "count": 1
+        },
+        {
+          "id": "e5",
+          "source": "BS_CUSTOMER_C1546820736",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 189.21,
+          "count": 1
+        },
+        {
+          "id": "e6",
+          "source": "BS_CUSTOMER_C1847111025",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 164.46,
+          "count": 1
+        },
+        {
+          "id": "e7",
+          "source": "BS_CUSTOMER_C476477241",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 163.87,
+          "count": 1
+        },
+        {
+          "id": "e8",
+          "source": "BS_CUSTOMER_C1017941602",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 158.85,
+          "count": 1
+        },
+        {
+          "id": "e9",
+          "source": "BS_CUSTOMER_C532292379",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 157.12,
+          "count": 1
+        },
+        {
+          "id": "e10",
+          "source": "BS_CUSTOMER_C1960297159",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 149.33,
+          "count": 1
+        },
+        {
+          "id": "e11",
+          "source": "BS_CUSTOMER_C1591612680",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 149.26,
+          "count": 1
+        },
+        {
+          "id": "e12",
+          "source": "BS_CUSTOMER_C979437396",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 139.28,
+          "count": 1
+        },
+        {
+          "id": "e13",
+          "source": "BS_CUSTOMER_C1439880421",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 138.35,
+          "count": 1
+        },
+        {
+          "id": "e14",
+          "source": "BS_CUSTOMER_C616528518",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 131.29,
+          "count": 1
+        },
+        {
+          "id": "e15",
+          "source": "BS_CUSTOMER_C1055224400",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 108.07,
+          "count": 1
+        },
+        {
+          "id": "e16",
+          "source": "BS_CUSTOMER_C15276068",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 104.02,
+          "count": 1
+        },
+        {
+          "id": "e17",
+          "source": "BS_CUSTOMER_C1862169273",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 102.88,
+          "count": 1
+        },
+        {
+          "id": "e18",
+          "source": "BS_CUSTOMER_C2011457912",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 97.54,
+          "count": 1
+        },
+        {
+          "id": "e19",
+          "source": "BS_CUSTOMER_C1082462651",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 89.2,
+          "count": 1
+        },
+        {
+          "id": "e20",
+          "source": "BS_CUSTOMER_C480961011",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 89.02,
+          "count": 1
+        },
+        {
+          "id": "e21",
+          "source": "BS_CUSTOMER_C668875156",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 87.74,
+          "count": 1
+        },
+        {
+          "id": "e22",
+          "source": "BS_CUSTOMER_C1642006830",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 81.74,
+          "count": 1
+        },
+        {
+          "id": "e23",
+          "source": "BS_CUSTOMER_C735039923",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 81.06,
+          "count": 1
+        },
+        {
+          "id": "e24",
+          "source": "BS_CUSTOMER_C1307916597",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 80.73,
+          "count": 1
+        },
+        {
+          "id": "e25",
+          "source": "BS_CUSTOMER_C1786430014",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 74.82,
+          "count": 1
+        },
+        {
+          "id": "e26",
+          "source": "BS_CUSTOMER_C2106115023",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 74.7,
+          "count": 1
+        },
+        {
+          "id": "e27",
+          "source": "BS_CUSTOMER_C1529774854",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 74.33,
+          "count": 1
+        },
+        {
+          "id": "e28",
+          "source": "BS_CUSTOMER_C531360588",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 70.79,
+          "count": 1
+        },
+        {
+          "id": "e29",
+          "source": "BS_CUSTOMER_C1506066038",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 69.85,
+          "count": 1
+        },
+        {
+          "id": "e30",
+          "source": "BS_CUSTOMER_C109947606",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 67.73,
+          "count": 1
+        },
+        {
+          "id": "e31",
+          "source": "BS_CUSTOMER_C1814746822",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 67.07,
+          "count": 1
+        },
+        {
+          "id": "e32",
+          "source": "BS_CUSTOMER_C2137070408",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 66.97,
+          "count": 1
+        },
+        {
+          "id": "e33",
+          "source": "BS_CUSTOMER_C35785606",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 64.62,
+          "count": 1
+        },
+        {
+          "id": "e34",
+          "source": "BS_CUSTOMER_C1304285526",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 64.6,
+          "count": 1
+        },
+        {
+          "id": "e35",
+          "source": "BS_CUSTOMER_C1632932485",
+          "target": "BS_MERCHANT_M1600850729",
+          "amount": 60.73,
+          "count": 1
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "transaction_id": "BS_TXN_0000004099",
+        "timestamp": "2026-02-01T01:08:19+00:00",
+        "amount": 1310.88,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 3.1983145021285964e-08,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000007267",
+        "timestamp": "2026-02-01T02:01:07+00:00",
+        "amount": 547.42,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 2.941406229695076e-08,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000008805",
+        "timestamp": "2026-02-01T03:26:45+00:00",
+        "amount": 45.12,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 6.259244234030348e-10,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000011426",
+        "timestamp": "2026-02-01T04:10:26+00:00",
+        "amount": 1432.52,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 2.12816431144347e-09,
+        "tags": [
+          "New payee",
+          "App re-registered"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000014059",
+        "timestamp": "2026-02-01T05:54:19+00:00",
+        "amount": 1316.77,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.8702910331569456e-09,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000019057",
+        "timestamp": "2026-02-01T07:17:37+00:00",
+        "amount": 1777.61,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 2.0706528158775939e-10,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000020295",
+        "timestamp": "2026-02-01T08:38:15+00:00",
+        "amount": 23.81,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.606609512094792e-09,
+        "tags": [
+          "New payee",
+          "Remote access"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000024379",
+        "timestamp": "2026-02-01T09:46:19+00:00",
+        "amount": 10.59,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 9.864598027320426e-10,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000025952",
+        "timestamp": "2026-02-01T10:12:32+00:00",
+        "amount": 1642.82,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 3.6732031305497514e-10,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000028276",
+        "timestamp": "2026-02-01T11:51:16+00:00",
+        "amount": 9553.3,
+        "scenario": "legitimate_split_payment",
+        "action": "ALLOW",
+        "fraud_probability": 3.4747694144243724e-07,
+        "tags": [
+          "New payee"
+        ],
+        "selected": true
+      }
+    ]
+  },
+  {
+    "key": "new_merchant",
+    "scenario": "new_merchant_legitimate",
+    "label": "First payment to a new merchant",
+    "short_label": "New merchant",
+    "kind": "legitimate",
+    "category": "Legitimate novelty",
+    "description": "A new-payee transaction where merchant trust and normal device behaviour can explain novelty.",
+    "source_dataset": "banksim",
+    "recipient_profile": "new_business",
+    "reference_transaction_id": "BS_TXN_0000027741",
+    "payer_id": "BS_CUSTOMER_C1757210259",
+    "payee_id": "BS_MERCHANT_M85975013",
+    "amount": 74.69,
+    "payload": {
+      "transaction_id": "WEB-NEW_MERCHANT-BS_TXN_0000027741",
+      "reference_transaction_id": "BS_TXN_0000027741",
+      "simulation_mode": true,
+      "session_id": "S-BS_TXN_0000027741",
+      "timestamp": "2026-02-01T10:42:21+00:00",
+      "payer_id": "BS_CUSTOMER_C1757210259",
+      "payee_id": "BS_MERCHANT_M85975013",
+      "amount": 74.69,
+      "payment_mode": "QR",
+      "device_id": "D032494",
+      "vpa_id": "vpa017806@upi",
+      "merchant_id": "MBS_MERCHANT_M85975013",
+      "qr_id": "QR017806",
+      "ip_asn": "AS1244",
+      "latitude": 19.0733671920379,
+      "longitude": 72.93338217132433,
+      "payee_latitude": 19.0733671920379,
+      "payee_longitude": 72.93338217132433,
+      "is_new_payee": true,
+      "qr_verified": true,
+      "collect_request": false,
+      "merchant_category": "SERVICES",
+      "device_age_days": 1093,
+      "sim_age_days": 1486,
+      "app_registration_age_days": 585,
+      "device_known": true,
+      "play_integrity_ok": true,
+      "recent_pin_reset": false,
+      "app_reregistered": false,
+      "remote_access_indicator": false,
+      "overlay_indicator": false,
+      "recipient_complaint_score": 0.12146436561546256,
+      "known_mule": false,
+      "common_owner_verified": false
+    },
+    "offline": {
+      "transaction_id": "BS_TXN_0000027741",
+      "fraud_probability": 4.041687817757378e-10,
+      "legitimate_novelty_probability": 0.9050694866347617,
+      "uncertainty": 0.10189469881432657,
+      "recommended_action": "ALLOW",
+      "fraud_types": [],
+      "reason_codes": [],
+      "model_scores": {
+        "rule_risk": 0.0,
+        "statistical_anomaly": 0.0,
+        "transaction_fraud": 0.00022021643835585305,
+        "legitimate_novelty": 0.9050694866347617,
+        "device_session_risk": 0.0,
+        "sequence_account_takeover": 3.5560555261326954e-05,
+        "sequence_social_engineering": 0.0005039548850618303,
+        "graph_mule": 0.04126120479817023,
+        "graph_merchant_legitimacy": 0.7916324734687805,
+        "graph_anomaly": 0.14276006622569964,
+        "complaint_intelligence": 0.0,
+        "journey_plausibility": 0.8152483775199838
+      },
+      "latency_ms": 0.0
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "BS_CUSTOMER_C100992504",
+          "label": "BS_CUSTOMER_C100992504",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1048694975",
+          "label": "BS_CUSTOMER_C1048694975",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1060470494",
+          "label": "BS_CUSTOMER_C1060470494",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1091680547",
+          "label": "BS_CUSTOMER_C1091680547",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1196915447",
+          "label": "BS_CUSTOMER_C1196915447",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1200336063",
+          "label": "BS_CUSTOMER_C1200336063",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C121713128",
+          "label": "BS_CUSTOMER_C121713128",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1349106433",
+          "label": "BS_CUSTOMER_C1349106433",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C135716487",
+          "label": "BS_CUSTOMER_C135716487",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1495681901",
+          "label": "BS_CUSTOMER_C1495681901",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1635613216",
+          "label": "BS_CUSTOMER_C1635613216",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1741401017",
+          "label": "BS_CUSTOMER_C1741401017",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C174977934",
+          "label": "BS_CUSTOMER_C174977934",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1757210259",
+          "label": "BS_CUSTOMER_C1757210259",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1765886577",
+          "label": "BS_CUSTOMER_C1765886577",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1860775846",
+          "label": "BS_CUSTOMER_C1860775846",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1904362781",
+          "label": "BS_CUSTOMER_C1904362781",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2037338028",
+          "label": "BS_CUSTOMER_C2037338028",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2088008854",
+          "label": "BS_CUSTOMER_C2088008854",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C222098023",
+          "label": "BS_CUSTOMER_C222098023",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C251875213",
+          "label": "BS_CUSTOMER_C251875213",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C325775693",
+          "label": "BS_CUSTOMER_C325775693",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C339181872",
+          "label": "BS_CUSTOMER_C339181872",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C365152877",
+          "label": "BS_CUSTOMER_C365152877",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C39890933",
+          "label": "BS_CUSTOMER_C39890933",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C478820701",
+          "label": "BS_CUSTOMER_C478820701",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C509362814",
+          "label": "BS_CUSTOMER_C509362814",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C60351691",
+          "label": "BS_CUSTOMER_C60351691",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C660690290",
+          "label": "BS_CUSTOMER_C660690290",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C800967034",
+          "label": "BS_CUSTOMER_C800967034",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C83086349",
+          "label": "BS_CUSTOMER_C83086349",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C85676975",
+          "label": "BS_CUSTOMER_C85676975",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C903741897",
+          "label": "BS_CUSTOMER_C903741897",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C926583171",
+          "label": "BS_CUSTOMER_C926583171",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C943088790",
+          "label": "BS_CUSTOMER_C943088790",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C984099618",
+          "label": "BS_CUSTOMER_C984099618",
+          "type": "payer"
+        },
+        {
+          "id": "BS_MERCHANT_M85975013",
+          "label": "BS_MERCHANT_M85975013",
+          "type": "target"
+        }
+      ],
+      "edges": [
+        {
+          "id": "e0",
+          "source": "BS_CUSTOMER_C85676975",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 90.7,
+          "count": 2
+        },
+        {
+          "id": "e1",
+          "source": "BS_CUSTOMER_C926583171",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 82.58,
+          "count": 2
+        },
+        {
+          "id": "e2",
+          "source": "BS_CUSTOMER_C60351691",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 76.07000000000001,
+          "count": 2
+        },
+        {
+          "id": "e3",
+          "source": "BS_CUSTOMER_C222098023",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 111548.59,
+          "count": 1
+        },
+        {
+          "id": "e4",
+          "source": "BS_CUSTOMER_C39890933",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 97.09,
+          "count": 1
+        },
+        {
+          "id": "e5",
+          "source": "BS_CUSTOMER_C1860775846",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 81.14,
+          "count": 1
+        },
+        {
+          "id": "e6",
+          "source": "BS_CUSTOMER_C325775693",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 80.91,
+          "count": 1
+        },
+        {
+          "id": "e7",
+          "source": "BS_CUSTOMER_C1757210259",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 74.69,
+          "count": 1
+        },
+        {
+          "id": "e8",
+          "source": "BS_CUSTOMER_C2088008854",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 72.03,
+          "count": 1
+        },
+        {
+          "id": "e9",
+          "source": "BS_CUSTOMER_C903741897",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 71.67,
+          "count": 1
+        },
+        {
+          "id": "e10",
+          "source": "BS_CUSTOMER_C83086349",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 71.41,
+          "count": 1
+        },
+        {
+          "id": "e11",
+          "source": "BS_CUSTOMER_C2037338028",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 70.52,
+          "count": 1
+        },
+        {
+          "id": "e12",
+          "source": "BS_CUSTOMER_C1196915447",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 60.7,
+          "count": 1
+        },
+        {
+          "id": "e13",
+          "source": "BS_CUSTOMER_C100992504",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 58.82,
+          "count": 1
+        },
+        {
+          "id": "e14",
+          "source": "BS_CUSTOMER_C1741401017",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 58.42,
+          "count": 1
+        },
+        {
+          "id": "e15",
+          "source": "BS_CUSTOMER_C1349106433",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 55.2,
+          "count": 1
+        },
+        {
+          "id": "e16",
+          "source": "BS_CUSTOMER_C121713128",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 54.0,
+          "count": 1
+        },
+        {
+          "id": "e17",
+          "source": "BS_CUSTOMER_C339181872",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 53.47,
+          "count": 1
+        },
+        {
+          "id": "e18",
+          "source": "BS_CUSTOMER_C174977934",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 52.81,
+          "count": 1
+        },
+        {
+          "id": "e19",
+          "source": "BS_CUSTOMER_C365152877",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 51.7,
+          "count": 1
+        },
+        {
+          "id": "e20",
+          "source": "BS_CUSTOMER_C509362814",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 50.36,
+          "count": 1
+        },
+        {
+          "id": "e21",
+          "source": "BS_CUSTOMER_C1495681901",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 49.66,
+          "count": 1
+        },
+        {
+          "id": "e22",
+          "source": "BS_CUSTOMER_C984099618",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 49.07,
+          "count": 1
+        },
+        {
+          "id": "e23",
+          "source": "BS_CUSTOMER_C1200336063",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 46.63,
+          "count": 1
+        },
+        {
+          "id": "e24",
+          "source": "BS_CUSTOMER_C1765886577",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 45.71,
+          "count": 1
+        },
+        {
+          "id": "e25",
+          "source": "BS_CUSTOMER_C135716487",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 45.45,
+          "count": 1
+        },
+        {
+          "id": "e26",
+          "source": "BS_CUSTOMER_C1904362781",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 45.09,
+          "count": 1
+        },
+        {
+          "id": "e27",
+          "source": "BS_CUSTOMER_C1635613216",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 44.83,
+          "count": 1
+        },
+        {
+          "id": "e28",
+          "source": "BS_CUSTOMER_C800967034",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 43.79,
+          "count": 1
+        },
+        {
+          "id": "e29",
+          "source": "BS_CUSTOMER_C251875213",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 43.12,
+          "count": 1
+        },
+        {
+          "id": "e30",
+          "source": "BS_CUSTOMER_C1091680547",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 41.57,
+          "count": 1
+        },
+        {
+          "id": "e31",
+          "source": "BS_CUSTOMER_C943088790",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 41.16,
+          "count": 1
+        },
+        {
+          "id": "e32",
+          "source": "BS_CUSTOMER_C1060470494",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 38.83,
+          "count": 1
+        },
+        {
+          "id": "e33",
+          "source": "BS_CUSTOMER_C1048694975",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 38.66,
+          "count": 1
+        },
+        {
+          "id": "e34",
+          "source": "BS_CUSTOMER_C660690290",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 37.97,
+          "count": 1
+        },
+        {
+          "id": "e35",
+          "source": "BS_CUSTOMER_C478820701",
+          "target": "BS_MERCHANT_M85975013",
+          "amount": 37.95,
+          "count": 1
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "transaction_id": "BS_TXN_0000004163",
+        "timestamp": "2026-02-01T01:09:23+00:00",
+        "amount": 88.06,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 0.020628804340958595,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000011747",
+        "timestamp": "2026-02-01T04:15:47+00:00",
+        "amount": 15.64,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 0.0059588318690657616,
+        "tags": [
+          "Unverified QR"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000013090",
+        "timestamp": "2026-02-01T05:38:10+00:00",
+        "amount": 37.96,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 6.822359122082844e-09,
+        "tags": [
+          "New payee",
+          "Unverified QR"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000015685",
+        "timestamp": "2026-02-01T06:21:25+00:00",
+        "amount": 17.88,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.4167628181738223e-09,
+        "tags": [
+          "New payee",
+          "Overlay detected"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000018639",
+        "timestamp": "2026-02-01T07:10:39+00:00",
+        "amount": 25.37,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 0.0005719087785109878,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000021534",
+        "timestamp": "2026-02-01T08:58:54+00:00",
+        "amount": 38.6,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 5.180829987239122e-09,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000021535",
+        "timestamp": "2026-02-01T08:58:55+00:00",
+        "amount": 11.55,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 7.283549052772287e-08,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000024325",
+        "timestamp": "2026-02-01T09:45:25+00:00",
+        "amount": 30.01,
+        "scenario": "new_merchant_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 6.589214081031969e-06,
+        "tags": [
+          "New payee",
+          "PIN reset"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000027741",
+        "timestamp": "2026-02-01T10:42:21+00:00",
+        "amount": 74.69,
+        "scenario": "new_merchant_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 4.041687817757378e-10,
+        "tags": [
+          "New payee"
+        ],
+        "selected": true
+      }
+    ]
+  },
+  {
+    "key": "gig_worker",
+    "scenario": "gig_worker_payment_legitimate",
+    "label": "Gig-worker payment",
+    "short_label": "Gig worker",
+    "kind": "legitimate",
+    "category": "High fan-in hard negative",
+    "description": "A recipient who legitimately receives many payments, testing whether the system confuses fan-in with mule behaviour.",
+    "source_dataset": "banksim",
+    "recipient_profile": "transport_provider",
+    "reference_transaction_id": "BS_TXN_0000029764",
+    "payer_id": "BS_CUSTOMER_C914488986",
+    "payee_id": "BS_MERCHANT_M348934600",
+    "amount": 32.05,
+    "payload": {
+      "transaction_id": "WEB-GIG_WORKER-BS_TXN_0000029764",
+      "reference_transaction_id": "BS_TXN_0000029764",
+      "simulation_mode": true,
+      "session_id": "S-BS_TXN_0000029764",
+      "timestamp": "2026-02-01T11:16:04+00:00",
+      "payer_id": "BS_CUSTOMER_C914488986",
+      "payee_id": "BS_MERCHANT_M348934600",
+      "amount": 32.05,
+      "payment_mode": "QR",
+      "device_id": "D031555",
+      "vpa_id": "vpa017801@upi",
+      "merchant_id": "MBS_MERCHANT_M348934600",
+      "qr_id": "QR017801",
+      "ip_asn": "AS1055",
+      "latitude": 19.1146113227541,
+      "longitude": 73.0792561089434,
+      "payee_latitude": 19.1146113227541,
+      "payee_longitude": 73.0792561089434,
+      "is_new_payee": true,
+      "qr_verified": true,
+      "collect_request": false,
+      "merchant_category": "TRANSPORT",
+      "device_age_days": 27,
+      "sim_age_days": 1530,
+      "app_registration_age_days": 737,
+      "device_known": true,
+      "play_integrity_ok": true,
+      "recent_pin_reset": false,
+      "app_reregistered": false,
+      "remote_access_indicator": false,
+      "overlay_indicator": false,
+      "recipient_complaint_score": 0.012214979383781965,
+      "known_mule": false,
+      "common_owner_verified": false
+    },
+    "offline": {
+      "transaction_id": "BS_TXN_0000029764",
+      "fraud_probability": 8.394906991782136e-10,
+      "legitimate_novelty_probability": 0.9735808041780631,
+      "uncertainty": 0.15660229419076355,
+      "recommended_action": "ALLOW",
+      "fraud_types": [],
+      "reason_codes": [],
+      "model_scores": {
+        "rule_risk": 0.0,
+        "statistical_anomaly": 0.0,
+        "transaction_fraud": 0.00013510731580009666,
+        "legitimate_novelty": 0.9735808041780631,
+        "device_session_risk": 0.0,
+        "sequence_account_takeover": 3.447039125603624e-05,
+        "sequence_social_engineering": 0.0004480936622712761,
+        "graph_mule": 0.0409031219594357,
+        "graph_merchant_legitimacy": 0.9988560676574707,
+        "graph_anomaly": 0.22897444993583305,
+        "complaint_intelligence": 0.63,
+        "journey_plausibility": 0.9130283524081256
+      },
+      "latency_ms": 0.0
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "BS_CUSTOMER_C1006176917",
+          "label": "BS_CUSTOMER_C1006176917",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1191832390",
+          "label": "BS_CUSTOMER_C1191832390",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1229072215",
+          "label": "BS_CUSTOMER_C1229072215",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1236489588",
+          "label": "BS_CUSTOMER_C1236489588",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1338020899",
+          "label": "BS_CUSTOMER_C1338020899",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1404684380",
+          "label": "BS_CUSTOMER_C1404684380",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1637357651",
+          "label": "BS_CUSTOMER_C1637357651",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1648096390",
+          "label": "BS_CUSTOMER_C1648096390",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C16791543",
+          "label": "BS_CUSTOMER_C16791543",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1697851479",
+          "label": "BS_CUSTOMER_C1697851479",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C187514477",
+          "label": "BS_CUSTOMER_C187514477",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1922157108",
+          "label": "BS_CUSTOMER_C1922157108",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2021849962",
+          "label": "BS_CUSTOMER_C2021849962",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2123823248",
+          "label": "BS_CUSTOMER_C2123823248",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C229665572",
+          "label": "BS_CUSTOMER_C229665572",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C297745197",
+          "label": "BS_CUSTOMER_C297745197",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C333991833",
+          "label": "BS_CUSTOMER_C333991833",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C352968107",
+          "label": "BS_CUSTOMER_C352968107",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C394979408",
+          "label": "BS_CUSTOMER_C394979408",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C427983732",
+          "label": "BS_CUSTOMER_C427983732",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C480975116",
+          "label": "BS_CUSTOMER_C480975116",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C573104116",
+          "label": "BS_CUSTOMER_C573104116",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C616472041",
+          "label": "BS_CUSTOMER_C616472041",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C656851338",
+          "label": "BS_CUSTOMER_C656851338",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C678683295",
+          "label": "BS_CUSTOMER_C678683295",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C679458582",
+          "label": "BS_CUSTOMER_C679458582",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C739732151",
+          "label": "BS_CUSTOMER_C739732151",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C825969892",
+          "label": "BS_CUSTOMER_C825969892",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C856674856",
+          "label": "BS_CUSTOMER_C856674856",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C85945497",
+          "label": "BS_CUSTOMER_C85945497",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C881073190",
+          "label": "BS_CUSTOMER_C881073190",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C896887653",
+          "label": "BS_CUSTOMER_C896887653",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C944634193",
+          "label": "BS_CUSTOMER_C944634193",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C96407618",
+          "label": "BS_CUSTOMER_C96407618",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C976209265",
+          "label": "BS_CUSTOMER_C976209265",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C98707741",
+          "label": "BS_CUSTOMER_C98707741",
+          "type": "payer"
+        },
+        {
+          "id": "BS_MERCHANT_M348934600",
+          "label": "BS_MERCHANT_M348934600",
+          "type": "target"
+        }
+      ],
+      "edges": [
+        {
+          "id": "e0",
+          "source": "BS_CUSTOMER_C2021849962",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 83203.21,
+          "count": 1
+        },
+        {
+          "id": "e1",
+          "source": "BS_CUSTOMER_C229665572",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 2146.13,
+          "count": 1
+        },
+        {
+          "id": "e2",
+          "source": "BS_CUSTOMER_C1338020899",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 2050.85,
+          "count": 1
+        },
+        {
+          "id": "e3",
+          "source": "BS_CUSTOMER_C944634193",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 2018.88,
+          "count": 1
+        },
+        {
+          "id": "e4",
+          "source": "BS_CUSTOMER_C96407618",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1999.25,
+          "count": 1
+        },
+        {
+          "id": "e5",
+          "source": "BS_CUSTOMER_C394979408",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1961.79,
+          "count": 1
+        },
+        {
+          "id": "e6",
+          "source": "BS_CUSTOMER_C679458582",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1871.66,
+          "count": 1
+        },
+        {
+          "id": "e7",
+          "source": "BS_CUSTOMER_C1637357651",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1806.04,
+          "count": 1
+        },
+        {
+          "id": "e8",
+          "source": "BS_CUSTOMER_C976209265",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1782.6,
+          "count": 1
+        },
+        {
+          "id": "e9",
+          "source": "BS_CUSTOMER_C1404684380",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1768.68,
+          "count": 1
+        },
+        {
+          "id": "e10",
+          "source": "BS_CUSTOMER_C333991833",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1683.93,
+          "count": 1
+        },
+        {
+          "id": "e11",
+          "source": "BS_CUSTOMER_C85945497",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1623.09,
+          "count": 1
+        },
+        {
+          "id": "e12",
+          "source": "BS_CUSTOMER_C656851338",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1400.8,
+          "count": 1
+        },
+        {
+          "id": "e13",
+          "source": "BS_CUSTOMER_C573104116",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1389.83,
+          "count": 1
+        },
+        {
+          "id": "e14",
+          "source": "BS_CUSTOMER_C825969892",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1313.03,
+          "count": 1
+        },
+        {
+          "id": "e15",
+          "source": "BS_CUSTOMER_C881073190",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1290.57,
+          "count": 1
+        },
+        {
+          "id": "e16",
+          "source": "BS_CUSTOMER_C1236489588",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1261.14,
+          "count": 1
+        },
+        {
+          "id": "e17",
+          "source": "BS_CUSTOMER_C352968107",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1221.64,
+          "count": 1
+        },
+        {
+          "id": "e18",
+          "source": "BS_CUSTOMER_C16791543",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1198.01,
+          "count": 1
+        },
+        {
+          "id": "e19",
+          "source": "BS_CUSTOMER_C616472041",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1180.35,
+          "count": 1
+        },
+        {
+          "id": "e20",
+          "source": "BS_CUSTOMER_C297745197",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1074.29,
+          "count": 1
+        },
+        {
+          "id": "e21",
+          "source": "BS_CUSTOMER_C427983732",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1020.27,
+          "count": 1
+        },
+        {
+          "id": "e22",
+          "source": "BS_CUSTOMER_C480975116",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 1018.11,
+          "count": 1
+        },
+        {
+          "id": "e23",
+          "source": "BS_CUSTOMER_C98707741",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 979.98,
+          "count": 1
+        },
+        {
+          "id": "e24",
+          "source": "BS_CUSTOMER_C1648096390",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 975.15,
+          "count": 1
+        },
+        {
+          "id": "e25",
+          "source": "BS_CUSTOMER_C187514477",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 919.59,
+          "count": 1
+        },
+        {
+          "id": "e26",
+          "source": "BS_CUSTOMER_C2123823248",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 891.9,
+          "count": 1
+        },
+        {
+          "id": "e27",
+          "source": "BS_CUSTOMER_C678683295",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 890.99,
+          "count": 1
+        },
+        {
+          "id": "e28",
+          "source": "BS_CUSTOMER_C1191832390",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 821.71,
+          "count": 1
+        },
+        {
+          "id": "e29",
+          "source": "BS_CUSTOMER_C1697851479",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 818.6,
+          "count": 1
+        },
+        {
+          "id": "e30",
+          "source": "BS_CUSTOMER_C739732151",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 761.02,
+          "count": 1
+        },
+        {
+          "id": "e31",
+          "source": "BS_CUSTOMER_C856674856",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 740.64,
+          "count": 1
+        },
+        {
+          "id": "e32",
+          "source": "BS_CUSTOMER_C1229072215",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 704.0,
+          "count": 1
+        },
+        {
+          "id": "e33",
+          "source": "BS_CUSTOMER_C1922157108",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 703.68,
+          "count": 1
+        },
+        {
+          "id": "e34",
+          "source": "BS_CUSTOMER_C896887653",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 689.64,
+          "count": 1
+        },
+        {
+          "id": "e35",
+          "source": "BS_CUSTOMER_C1006176917",
+          "target": "BS_MERCHANT_M348934600",
+          "amount": 652.37,
+          "count": 1
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "transaction_id": "BS_TXN_0000005819",
+        "timestamp": "2026-02-01T02:36:59+00:00",
+        "amount": 989.68,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.2926921755251897e-08,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000007516",
+        "timestamp": "2026-02-01T03:05:16+00:00",
+        "amount": 7.62,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 0.01095482800155878,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000010384",
+        "timestamp": "2026-02-01T04:53:04+00:00",
+        "amount": 14.14,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 2.0180332072072815e-08,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000014166",
+        "timestamp": "2026-02-01T05:56:06+00:00",
+        "amount": 4.74,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 0.0007700531859882176,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000017112",
+        "timestamp": "2026-02-01T06:45:12+00:00",
+        "amount": 1144.98,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 4.1118768112635706e-11,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000019702",
+        "timestamp": "2026-02-01T07:28:22+00:00",
+        "amount": 12.43,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 2.005328125775918e-09,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000020770",
+        "timestamp": "2026-02-01T08:46:10+00:00",
+        "amount": 21.39,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 3.9412628716206655e-09,
+        "tags": [
+          "New payee",
+          "Unverified QR"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000023314",
+        "timestamp": "2026-02-01T09:28:34+00:00",
+        "amount": 39.13,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.5403943676162157e-09,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000026791",
+        "timestamp": "2026-02-01T10:26:31+00:00",
+        "amount": 40.24,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.3701328960280534e-10,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000029764",
+        "timestamp": "2026-02-01T11:16:04+00:00",
+        "amount": 32.05,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 8.394906991782136e-10,
+        "tags": [
+          "New payee"
+        ],
+        "selected": true
+      }
+    ]
+  },
+  {
+    "key": "travel_hotel",
+    "scenario": "travel_hotel_legitimate",
+    "label": "Travel / hotel payment",
+    "short_label": "Travel",
+    "kind": "legitimate",
+    "category": "Location hard negative",
+    "description": "An unusual geographic payment that should be explained by plausible travel rather than treated as impossible movement.",
+    "source_dataset": "banksim",
+    "recipient_profile": "hotel",
+    "reference_transaction_id": "BS_TXN_0000028368",
+    "payer_id": "BS_CUSTOMER_C30336615",
+    "payee_id": "BS_MERCHANT_M1873032707",
+    "amount": 30067.03,
+    "payload": {
+      "transaction_id": "WEB-TRAVEL_HOTEL-BS_TXN_0000028368",
+      "reference_transaction_id": "BS_TXN_0000028368",
+      "simulation_mode": true,
+      "session_id": "S-BS_TXN_0000028368",
+      "timestamp": "2026-02-01T11:52:48+00:00",
+      "payer_id": "BS_CUSTOMER_C30336615",
+      "payee_id": "BS_MERCHANT_M1873032707",
+      "amount": 30067.03,
+      "payment_mode": "P2P",
+      "device_id": "D031204",
+      "vpa_id": "vpa017818@upi",
+      "merchant_id": "MBS_MERCHANT_M1873032707",
+      "qr_id": "QR017818",
+      "ip_asn": "AS1204",
+      "latitude": 19.065620572718284,
+      "longitude": 71.97932321434962,
+      "payee_latitude": 19.065620572718284,
+      "payee_longitude": 71.97932321434962,
+      "is_new_payee": true,
+      "qr_verified": false,
+      "collect_request": false,
+      "merchant_category": "HOTEL",
+      "device_age_days": 1407,
+      "sim_age_days": 277,
+      "app_registration_age_days": 708,
+      "device_known": true,
+      "play_integrity_ok": true,
+      "recent_pin_reset": false,
+      "app_reregistered": false,
+      "remote_access_indicator": false,
+      "overlay_indicator": false,
+      "recipient_complaint_score": 0.0778659048236485,
+      "known_mule": false,
+      "common_owner_verified": false
+    },
+    "offline": {
+      "transaction_id": "BS_TXN_0000028368",
+      "fraud_probability": 1.0695672244764864e-05,
+      "legitimate_novelty_probability": 0.9944442091705719,
+      "uncertainty": 0.20732801074078033,
+      "recommended_action": "ALLOW",
+      "fraud_types": [],
+      "reason_codes": [],
+      "model_scores": {
+        "rule_risk": 0.0,
+        "statistical_anomaly": 0.0,
+        "transaction_fraud": 0.13865464788496623,
+        "legitimate_novelty": 0.9944442091705719,
+        "device_session_risk": 0.0,
+        "sequence_account_takeover": 0.00018100495799444616,
+        "sequence_social_engineering": 0.0004319515428505838,
+        "graph_mule": 0.038490505468394755,
+        "graph_merchant_legitimacy": 0.49335622787475586,
+        "graph_anomaly": 0.1005037701322206,
+        "complaint_intelligence": 0.0,
+        "journey_plausibility": 0.8935405913209581
+      },
+      "latency_ms": 0.0
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "BS_CUSTOMER_C1187353931",
+          "label": "BS_CUSTOMER_C1187353931",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1746579125",
+          "label": "BS_CUSTOMER_C1746579125",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C181787207",
+          "label": "BS_CUSTOMER_C181787207",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1902378891",
+          "label": "BS_CUSTOMER_C1902378891",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2049382420",
+          "label": "BS_CUSTOMER_C2049382420",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C30336615",
+          "label": "BS_CUSTOMER_C30336615",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C506565122",
+          "label": "BS_CUSTOMER_C506565122",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C993027768",
+          "label": "BS_CUSTOMER_C993027768",
+          "type": "payer"
+        },
+        {
+          "id": "BS_MERCHANT_M1873032707",
+          "label": "BS_MERCHANT_M1873032707",
+          "type": "target"
+        }
+      ],
+      "edges": [
+        {
+          "id": "e0",
+          "source": "BS_CUSTOMER_C30336615",
+          "target": "BS_MERCHANT_M1873032707",
+          "amount": 30067.03,
+          "count": 1
+        },
+        {
+          "id": "e1",
+          "source": "BS_CUSTOMER_C2049382420",
+          "target": "BS_MERCHANT_M1873032707",
+          "amount": 29514.09,
+          "count": 1
+        },
+        {
+          "id": "e2",
+          "source": "BS_CUSTOMER_C993027768",
+          "target": "BS_MERCHANT_M1873032707",
+          "amount": 26855.98,
+          "count": 1
+        },
+        {
+          "id": "e3",
+          "source": "BS_CUSTOMER_C181787207",
+          "target": "BS_MERCHANT_M1873032707",
+          "amount": 25468.7,
+          "count": 1
+        },
+        {
+          "id": "e4",
+          "source": "BS_CUSTOMER_C1902378891",
+          "target": "BS_MERCHANT_M1873032707",
+          "amount": 16646.49,
+          "count": 1
+        },
+        {
+          "id": "e5",
+          "source": "BS_CUSTOMER_C1187353931",
+          "target": "BS_MERCHANT_M1873032707",
+          "amount": 4589.55,
+          "count": 1
+        },
+        {
+          "id": "e6",
+          "source": "BS_CUSTOMER_C506565122",
+          "target": "BS_MERCHANT_M1873032707",
+          "amount": 3322.41,
+          "count": 1
+        },
+        {
+          "id": "e7",
+          "source": "BS_CUSTOMER_C1746579125",
+          "target": "BS_MERCHANT_M1873032707",
+          "amount": 2445.14,
+          "count": 1
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "transaction_id": "BS_TXN_0000006571",
+        "timestamp": "2026-02-01T02:49:31+00:00",
+        "amount": 996.01,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 4.8334257485294074e-08,
+        "tags": [
+          "New payee",
+          "Unverified QR"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000009599",
+        "timestamp": "2026-02-01T03:39:59+00:00",
+        "amount": 1791.75,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 7.981925120859046e-10,
+        "tags": [
+          "New payee",
+          "PIN reset"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000010798",
+        "timestamp": "2026-02-01T04:59:58+00:00",
+        "amount": 14.9,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.0022930929665108e-08,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000013127",
+        "timestamp": "2026-02-01T05:38:47+00:00",
+        "amount": 20.28,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 9.30352683781166e-09,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000016126",
+        "timestamp": "2026-02-01T06:28:46+00:00",
+        "amount": 1000.62,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 4.500683159491814e-10,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000018052",
+        "timestamp": "2026-02-01T07:00:52+00:00",
+        "amount": 28.28,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 8.917065486002684e-08,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000020740",
+        "timestamp": "2026-02-01T08:45:40+00:00",
+        "amount": 0.88,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.6257274415565348e-09,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000025123",
+        "timestamp": "2026-02-01T09:58:43+00:00",
+        "amount": 701.74,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.7129495599732536e-09,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000025366",
+        "timestamp": "2026-02-01T10:02:46+00:00",
+        "amount": 38739.39,
+        "scenario": "remote_access_scam",
+        "action": "BLOCK",
+        "fraud_probability": 0.999964714050293,
+        "tags": [
+          "App re-registered",
+          "Overlay detected"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000028368",
+        "timestamp": "2026-02-01T11:52:48+00:00",
+        "amount": 30067.03,
+        "scenario": "travel_hotel_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.0695672244764864e-05,
+        "tags": [
+          "New payee"
+        ],
+        "selected": true
+      }
+    ]
+  },
+  {
+    "key": "familiar",
+    "scenario": "familiar_legitimate",
+    "label": "Familiar recurring payment",
+    "short_label": "Familiar",
+    "kind": "legitimate",
+    "category": "Baseline legitimate",
+    "description": "A known-pattern transaction used as a sanity check for normal behaviour and low-friction approval.",
+    "source_dataset": "banksim",
+    "recipient_profile": "transport_provider",
+    "reference_transaction_id": "BS_TXN_0000027748",
+    "payer_id": "BS_CUSTOMER_C191366309",
+    "payee_id": "BS_MERCHANT_M1823072687",
+    "amount": 2.81,
+    "payload": {
+      "transaction_id": "WEB-FAMILIAR-BS_TXN_0000027748",
+      "reference_transaction_id": "BS_TXN_0000027748",
+      "simulation_mode": true,
+      "session_id": "S-BS_TXN_0000027748",
+      "timestamp": "2026-02-01T10:42:28+00:00",
+      "payer_id": "BS_CUSTOMER_C191366309",
+      "payee_id": "BS_MERCHANT_M1823072687",
+      "amount": 2.81,
+      "payment_mode": "QR",
+      "device_id": "D032048",
+      "vpa_id": "vpa017802@upi",
+      "merchant_id": "MBS_MERCHANT_M1823072687",
+      "qr_id": "QR017802",
+      "ip_asn": "AS1048",
+      "latitude": 19.065819816491306,
+      "longitude": 73.00475838662432,
+      "payee_latitude": 19.065819816491306,
+      "payee_longitude": 73.00475838662432,
+      "is_new_payee": true,
+      "qr_verified": true,
+      "collect_request": false,
+      "merchant_category": "TRANSPORT",
+      "device_age_days": 1419,
+      "sim_age_days": 481,
+      "app_registration_age_days": 592,
+      "device_known": true,
+      "play_integrity_ok": true,
+      "recent_pin_reset": false,
+      "app_reregistered": false,
+      "remote_access_indicator": false,
+      "overlay_indicator": false,
+      "recipient_complaint_score": 0.031760272100494764,
+      "known_mule": false,
+      "common_owner_verified": false
+    },
+    "offline": {
+      "transaction_id": "BS_TXN_0000027748",
+      "fraud_probability": 2.839418700162355e-09,
+      "legitimate_novelty_probability": 0.8145627443167955,
+      "uncertainty": 0.15897161715072516,
+      "recommended_action": "ALLOW",
+      "fraud_types": [],
+      "reason_codes": [],
+      "model_scores": {
+        "rule_risk": 0.0,
+        "statistical_anomaly": 0.0,
+        "transaction_fraud": 0.0001398337340315456,
+        "legitimate_novelty": 0.8145627443167955,
+        "device_session_risk": 0.0,
+        "sequence_account_takeover": 3.189409471815452e-05,
+        "sequence_social_engineering": 0.0004752826935146004,
+        "graph_mule": 0.04076988366688294,
+        "graph_merchant_legitimacy": 0.9969821572303772,
+        "graph_anomaly": 0.23477100827335806,
+        "complaint_intelligence": 0.63,
+        "journey_plausibility": 0.923702175942305
+      },
+      "latency_ms": 0.0
+    },
+    "graph": {
+      "nodes": [
+        {
+          "id": "BS_CUSTOMER_C1017941602",
+          "label": "BS_CUSTOMER_C1017941602",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1133451243",
+          "label": "BS_CUSTOMER_C1133451243",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1154612561",
+          "label": "BS_CUSTOMER_C1154612561",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C12284077",
+          "label": "BS_CUSTOMER_C12284077",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1256908044",
+          "label": "BS_CUSTOMER_C1256908044",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1349106433",
+          "label": "BS_CUSTOMER_C1349106433",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1355010178",
+          "label": "BS_CUSTOMER_C1355010178",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1366869967",
+          "label": "BS_CUSTOMER_C1366869967",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1373973501",
+          "label": "BS_CUSTOMER_C1373973501",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1452354279",
+          "label": "BS_CUSTOMER_C1452354279",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1480799932",
+          "label": "BS_CUSTOMER_C1480799932",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1488142454",
+          "label": "BS_CUSTOMER_C1488142454",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1551465414",
+          "label": "BS_CUSTOMER_C1551465414",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1560676680",
+          "label": "BS_CUSTOMER_C1560676680",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C16680464",
+          "label": "BS_CUSTOMER_C16680464",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1701618194",
+          "label": "BS_CUSTOMER_C1701618194",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1928637369",
+          "label": "BS_CUSTOMER_C1928637369",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1965708710",
+          "label": "BS_CUSTOMER_C1965708710",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C1975714155",
+          "label": "BS_CUSTOMER_C1975714155",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C207380283",
+          "label": "BS_CUSTOMER_C207380283",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C2075699398",
+          "label": "BS_CUSTOMER_C2075699398",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C289617636",
+          "label": "BS_CUSTOMER_C289617636",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C364635096",
+          "label": "BS_CUSTOMER_C364635096",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C380911997",
+          "label": "BS_CUSTOMER_C380911997",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C395508103",
+          "label": "BS_CUSTOMER_C395508103",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C413455659",
+          "label": "BS_CUSTOMER_C413455659",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C567616900",
+          "label": "BS_CUSTOMER_C567616900",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C576453501",
+          "label": "BS_CUSTOMER_C576453501",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C602096181",
+          "label": "BS_CUSTOMER_C602096181",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C700940580",
+          "label": "BS_CUSTOMER_C700940580",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C717345438",
+          "label": "BS_CUSTOMER_C717345438",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C725705195",
+          "label": "BS_CUSTOMER_C725705195",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C76969430",
+          "label": "BS_CUSTOMER_C76969430",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C800967034",
+          "label": "BS_CUSTOMER_C800967034",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C817389751",
+          "label": "BS_CUSTOMER_C817389751",
+          "type": "payer"
+        },
+        {
+          "id": "BS_CUSTOMER_C861930901",
+          "label": "BS_CUSTOMER_C861930901",
+          "type": "payer"
+        },
+        {
+          "id": "BS_MERCHANT_M1823072687",
+          "label": "BS_MERCHANT_M1823072687",
+          "type": "target"
+        }
+      ],
+      "edges": [
+        {
+          "id": "e0",
+          "source": "BS_CUSTOMER_C1965708710",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 2103.82,
+          "count": 1
+        },
+        {
+          "id": "e1",
+          "source": "BS_CUSTOMER_C76969430",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 2096.45,
+          "count": 1
+        },
+        {
+          "id": "e2",
+          "source": "BS_CUSTOMER_C395508103",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 2090.52,
+          "count": 1
+        },
+        {
+          "id": "e3",
+          "source": "BS_CUSTOMER_C1349106433",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 2048.03,
+          "count": 1
+        },
+        {
+          "id": "e4",
+          "source": "BS_CUSTOMER_C207380283",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 2027.55,
+          "count": 1
+        },
+        {
+          "id": "e5",
+          "source": "BS_CUSTOMER_C2075699398",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1999.48,
+          "count": 1
+        },
+        {
+          "id": "e6",
+          "source": "BS_CUSTOMER_C364635096",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1988.01,
+          "count": 1
+        },
+        {
+          "id": "e7",
+          "source": "BS_CUSTOMER_C380911997",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1937.32,
+          "count": 1
+        },
+        {
+          "id": "e8",
+          "source": "BS_CUSTOMER_C1154612561",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1894.77,
+          "count": 1
+        },
+        {
+          "id": "e9",
+          "source": "BS_CUSTOMER_C602096181",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1886.64,
+          "count": 1
+        },
+        {
+          "id": "e10",
+          "source": "BS_CUSTOMER_C861930901",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1859.2,
+          "count": 1
+        },
+        {
+          "id": "e11",
+          "source": "BS_CUSTOMER_C1373973501",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1847.41,
+          "count": 1
+        },
+        {
+          "id": "e12",
+          "source": "BS_CUSTOMER_C16680464",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1795.58,
+          "count": 1
+        },
+        {
+          "id": "e13",
+          "source": "BS_CUSTOMER_C413455659",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1793.74,
+          "count": 1
+        },
+        {
+          "id": "e14",
+          "source": "BS_CUSTOMER_C289617636",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1784.14,
+          "count": 1
+        },
+        {
+          "id": "e15",
+          "source": "BS_CUSTOMER_C1488142454",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1767.56,
+          "count": 1
+        },
+        {
+          "id": "e16",
+          "source": "BS_CUSTOMER_C725705195",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1760.63,
+          "count": 1
+        },
+        {
+          "id": "e17",
+          "source": "BS_CUSTOMER_C1928637369",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1726.99,
+          "count": 1
+        },
+        {
+          "id": "e18",
+          "source": "BS_CUSTOMER_C800967034",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1700.2,
+          "count": 1
+        },
+        {
+          "id": "e19",
+          "source": "BS_CUSTOMER_C817389751",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1661.44,
+          "count": 1
+        },
+        {
+          "id": "e20",
+          "source": "BS_CUSTOMER_C567616900",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1620.65,
+          "count": 1
+        },
+        {
+          "id": "e21",
+          "source": "BS_CUSTOMER_C1256908044",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1595.76,
+          "count": 1
+        },
+        {
+          "id": "e22",
+          "source": "BS_CUSTOMER_C12284077",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1507.87,
+          "count": 1
+        },
+        {
+          "id": "e23",
+          "source": "BS_CUSTOMER_C1355010178",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1491.42,
+          "count": 1
+        },
+        {
+          "id": "e24",
+          "source": "BS_CUSTOMER_C1560676680",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1459.05,
+          "count": 1
+        },
+        {
+          "id": "e25",
+          "source": "BS_CUSTOMER_C1551465414",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1449.03,
+          "count": 1
+        },
+        {
+          "id": "e26",
+          "source": "BS_CUSTOMER_C1366869967",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1448.03,
+          "count": 1
+        },
+        {
+          "id": "e27",
+          "source": "BS_CUSTOMER_C717345438",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1428.52,
+          "count": 1
+        },
+        {
+          "id": "e28",
+          "source": "BS_CUSTOMER_C1452354279",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1416.39,
+          "count": 1
+        },
+        {
+          "id": "e29",
+          "source": "BS_CUSTOMER_C1133451243",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1387.12,
+          "count": 1
+        },
+        {
+          "id": "e30",
+          "source": "BS_CUSTOMER_C700940580",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1219.88,
+          "count": 1
+        },
+        {
+          "id": "e31",
+          "source": "BS_CUSTOMER_C1975714155",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1175.31,
+          "count": 1
+        },
+        {
+          "id": "e32",
+          "source": "BS_CUSTOMER_C1701618194",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1153.54,
+          "count": 1
+        },
+        {
+          "id": "e33",
+          "source": "BS_CUSTOMER_C1017941602",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1144.32,
+          "count": 1
+        },
+        {
+          "id": "e34",
+          "source": "BS_CUSTOMER_C576453501",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1094.05,
+          "count": 1
+        },
+        {
+          "id": "e35",
+          "source": "BS_CUSTOMER_C1480799932",
+          "target": "BS_MERCHANT_M1823072687",
+          "amount": 1060.12,
+          "count": 1
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "transaction_id": "BS_TXN_0000002063",
+        "timestamp": "2026-02-01T00:34:23+00:00",
+        "amount": 10.53,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 0.0007505813846364617,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000003103",
+        "timestamp": "2026-02-01T01:51:43+00:00",
+        "amount": 29.05,
+        "scenario": "gig_worker_payment_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.1688638323903433e-06,
+        "tags": [
+          "New payee",
+          "Unverified QR"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000005235",
+        "timestamp": "2026-02-01T02:27:15+00:00",
+        "amount": 1509.39,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 1.3317586535777082e-06,
+        "tags": [
+          "New payee",
+          "Unverified QR"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000007431",
+        "timestamp": "2026-02-01T03:03:51+00:00",
+        "amount": 527.3,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 7.483039098588051e-06,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000010989",
+        "timestamp": "2026-02-01T04:03:09+00:00",
+        "amount": 1318.32,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 4.0477365814695077e-07,
+        "tags": [],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000012922",
+        "timestamp": "2026-02-01T05:35:22+00:00",
+        "amount": 1562.95,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 2.835404757206561e-06,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000017410",
+        "timestamp": "2026-02-01T06:50:10+00:00",
+        "amount": 810.45,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 5.164731646800647e-07,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000021000",
+        "timestamp": "2026-02-01T08:50:00+00:00",
+        "amount": 2170.75,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 6.176941980129413e-08,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000023253",
+        "timestamp": "2026-02-01T09:27:33+00:00",
+        "amount": 1083.57,
+        "scenario": "auto_long_distance_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 3.0190552280373595e-08,
+        "tags": [
+          "New payee"
+        ],
+        "selected": false
+      },
+      {
+        "transaction_id": "BS_TXN_0000027748",
+        "timestamp": "2026-02-01T10:42:28+00:00",
+        "amount": 2.81,
+        "scenario": "familiar_legitimate",
+        "action": "ALLOW",
+        "fraud_probability": 2.839418700162355e-09,
+        "tags": [
+          "New payee"
+        ],
+        "selected": true
+      }
+    ]
+  }
+]

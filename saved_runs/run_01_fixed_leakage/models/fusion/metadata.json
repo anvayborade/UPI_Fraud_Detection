@@ -1,0 +1,73 @@
+{
+  "expert_columns": [
+    "rule_risk",
+    "statistical_anomaly",
+    "transaction_fraud_score",
+    "legitimate_novelty_inverse",
+    "device_session_risk",
+    "sequence_account_takeover_score",
+    "sequence_social_engineering_score",
+    "graph_mule_score",
+    "graph_anomaly_score",
+    "complaint_intelligence_score",
+    "journey_risk"
+  ],
+  "gating_columns": [
+    "is_new_payee",
+    "collect_request",
+    "is_qr",
+    "device_changed",
+    "graph_neighbourhood_size",
+    "recipient_archetype_code",
+    "missing_feature_ratio"
+  ],
+  "fraud_type_columns": [
+    "is_account_takeover",
+    "is_social_engineering",
+    "is_qr_deception",
+    "is_collect_scam",
+    "is_mule_directed",
+    "is_transaction_splitting",
+    "is_remote_access_fraud"
+  ],
+  "feature_mean": [
+    0.01628219150006771,
+    0.12367299944162369,
+    0.13224707543849945,
+    0.6164857745170593,
+    0.0412723571062088,
+    0.006954259239137173,
+    0.02989482693374157,
+    0.5791237354278564,
+    0.42601171135902405,
+    0.24301683902740479,
+    0.19787004590034485,
+    0.45955556631088257,
+    0.020444445312023163,
+    0.40077778697013855,
+    0.086888886988163,
+    532.5326538085938,
+    0.8533333539962769,
+    0.09000344574451447
+  ],
+  "feature_std": [
+    0.09001751989126205,
+    0.17822951078414917,
+    0.25830549001693726,
+    0.33196988701820374,
+    0.11146024614572525,
+    0.06496673822402954,
+    0.14164981245994568,
+    0.2787729799747467,
+    0.34962260723114014,
+    0.3455151617527008,
+    0.10396598279476166,
+    0.4983600676059723,
+    0.14151500165462494,
+    0.49005696177482605,
+    0.2816770076751709,
+    681.1695556640625,
+    1.0907840728759766,
+    0.09950437396764755
+  ]
+}

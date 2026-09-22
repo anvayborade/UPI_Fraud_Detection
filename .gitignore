@@ -1,0 +1,157 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+mlruns/*
+!mlruns/__init__.py
+models/*
+!models/__init__.py
+data/raw/*.csv
+data/processed/*.parquet
+data/processed/*.pkl
+data/sequences/*.parquet
+data/graph_views/*.pt
+data/graph_views/*.pkl
+data/complaints/*.parquet
+.DS_Store
+.idea/
+.vscode/
+android-client/.gradle/
+android-client/local.properties
+android-client/app/build/
+
+# ============================================================
+# PRIVATE / SECRET FILES
+# ============================================================
+
+.env
+.env.*
+#!.env.example
+
+*.pem
+*.key
+*.crt
+
+# ============================================================
+# DATASETS
+# Do NOT upload public/raw/generated datasets to GitHub
+# ============================================================
+
+/data/
+
+*.parquet
+*.parq
+*.feather
+
+# CSV copies generated from the parquet files
+/parquet_csv_export/
+
+# ============================================================
+# TRAINED MODEL BINARIES / CHECKPOINTS
+# ============================================================
+
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+/models/**/*.pkl
+/models/**/*.pickle
+/models/**/*.joblib
+/models/**/*.pt
+/models/**/*.pth
+/models/**/*.ckpt
+/models/**/*.onnx
+
+# ============================================================
+# PYTHON CACHE / ENVIRONMENTS
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.venv/
+venv/
+env/
+ENV/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ============================================================
+# JUPYTER
+# ============================================================
+
+.ipynb_checkpoints/
+
+# ============================================================
+# FRONTEND / NODE
+# ============================================================
+
+frontend/node_modules/
+frontend/dist/
+node_modules/
+dist/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================================
+# IDE
+# ============================================================
+
+.vscode/
+.idea/
+
+# ============================================================
+# OS
+# ============================================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================
+# LOGS / TEMP FILES
+# ============================================================
+
+*.log
+*.tmp
+*.temp
+*.cache
+
+# ============================================================
+# ARCHIVES / LARGE EXPORTS
+# ============================================================
+
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+
+# ============================================================
+# LOCAL REDIS / KAFKA / DOCKER DATA IF PRESENT
+# ============================================================
+
+redis-data/
+kafka-data/
+docker-data/
+
+# ============================================================
+# GENERATED BUILD / COVERAGE OUTPUTS
+# ============================================================
+
+build/
+coverage/
